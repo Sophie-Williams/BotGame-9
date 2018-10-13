@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[SelectionBase]
 public class CameraController : MonoBehaviour {
 	[SerializeField] Transform CameraRotation;
 	[SerializeField] Transform CameraAttachment;
@@ -14,10 +15,10 @@ public class CameraController : MonoBehaviour {
 
 	private float currentHorizonalRotation;
 	private float currentVerticalRotation;
+	private Quaternion initialRotation;
 
 	void Start() {
-		currentHorizonalRotation = CameraRotation.localEulerAngles.y;
-		currentVerticalRotation = CameraRotation.localEulerAngles.x;
+		initialRotation = CameraRotation.rotation;
 	}
 
 	public void MakeActive(){
@@ -30,9 +31,11 @@ public class CameraController : MonoBehaviour {
 	public void Rotate(float h, float v) {
 		currentHorizonalRotation = Mathf.Clamp(currentHorizonalRotation + h*Time.deltaTime*RotationSpeed, MinHorizontalAngle, MaxHorizontalAngle);
 		currentVerticalRotation = Mathf.Clamp(currentVerticalRotation + v*Time.deltaTime*RotationSpeed, MinVerticalAngle, MaxVerticalAngle);
-
-		CameraRotation.localRotation = Quaternion.Euler(currentVerticalRotation, currentHorizonalRotation, 0f);
+		CameraRotation.rotation = calcRotation(currentHorizonalRotation, currentVerticalRotation);
 	}
 
+	private Quaternion calcRotation(float horizontal, float vertical){
+		return Quaternion.Euler(Vector3.up * horizontal) * Quaternion.Euler(Vector3.forward * vertical) * initialRotation;
+	}
 
 }
