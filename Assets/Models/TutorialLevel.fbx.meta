@@ -22,6 +22,11 @@ ModelImporter:
     100032: WallNorth
     100034: WallSouth
     100036: WallWest
+    100038: ApartmentInnerWallTrim
+    100040: ApartmentWindowWall3
+    100042: WallEast.001
+    100044: WindowGlow
+    100046: WindowSill
     400000: Apartment
     400002: ApartmentCeiling
     400004: ApartmentHallwayPortal
@@ -41,11 +46,19 @@ ModelImporter:
     400032: WallNorth
     400034: WallSouth
     400036: WallWest
+    400038: ApartmentInnerWallTrim
+    400040: ApartmentWindowWall3
+    400042: WallEast.001
+    400044: WindowGlow
+    400046: WindowSill
     2000000: Camera
     2100000: ApartmentWall
     2100002: ApartmentCeiling
     2100004: ApartmentFloor
     2100006: WallInner
+    2100008: TrimColor
+    2100010: WindowSill
+    2100012: WindowGlow
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall
@@ -60,6 +73,11 @@ ModelImporter:
     2300022: WallNorth
     2300024: WallSouth
     2300026: WallWest
+    2300028: ApartmentInnerWallTrim
+    2300030: ApartmentWindowWall3
+    2300032: WallEast.001
+    2300034: WindowGlow
+    2300036: WindowSill
     3300000: ApartmentCeiling
     3300002: ApartmentHallwayPortal
     3300004: ApartmentInnerWall
@@ -74,6 +92,11 @@ ModelImporter:
     3300022: WallNorth
     3300024: WallSouth
     3300026: WallWest
+    3300028: ApartmentInnerWallTrim
+    3300030: ApartmentWindowWall3
+    3300032: WallEast.001
+    3300034: WindowGlow
+    3300036: WindowSill
     4300000: HallwayWallSouth
     4300002: HallwayCeiling
     4300004: HallwayFloor
@@ -88,6 +111,11 @@ ModelImporter:
     4300022: ApartmentInnerWall
     4300024: ApartnmentFloor
     4300026: ApartmentCeiling
+    4300028: ApartmentInnerWallTrim
+    4300030: WallEast.001
+    4300032: ApartmentWindowWall3
+    4300034: WindowSill
+    4300036: WindowGlow
     10800000: Lamp
     10800002: Lamp.001
   externalObjects:
@@ -109,8 +137,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: TrimColor
+    second: {fileID: 2100000, guid: 6ad3e6f10d8ceb249a849631d9754c77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: WallInner
     second: {fileID: 2100000, guid: 91fd92d9ea16c4842ad3cd214d0b241b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowGlow
+    second: {fileID: 2100000, guid: a736bdc1c934fef4c8d68446b41bf77b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowSill
+    second: {fileID: 2100000, guid: a3213cb7a05967c40acbd6de88d37d50, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -149,7 +192,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -157,9 +200,9 @@ ModelImporter:
     preserveHierarchy: 0
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
+    secondaryUVAreaDistortion: 15
     secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVPackMargin: 30
     useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0

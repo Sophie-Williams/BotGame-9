@@ -18,6 +18,11 @@ ModelImporter:
     100024: WallNorth
     100026: WallSouth
     100028: WallWest
+    100030: ApartmentInnerWallTrim
+    100032: ApartmentWindowWall3
+    100034: WallEast_001
+    100036: WindowGlow
+    100038: WindowSill
     400000: ApartmentCeiling
     400002: ApartmentHallwayPortal
     400004: ApartmentInnerWall
@@ -33,11 +38,20 @@ ModelImporter:
     400024: WallNorth
     400026: WallSouth
     400028: WallWest
+    400030: ApartmentInnerWallTrim
+    400032: ApartmentWindowWall3
+    400034: WallEast_001
+    400036: WindowGlow
+    400038: WindowSill
     2100000: ApartmentWall
     2100002: ApartmentCeiling
     2100004: ApartmentFloor
     2100006: ApartmentWall__TexturesCom_Plaster_Painted_1K_albedo_tif
     2100008: WallInner__TexturesCom_Plaster_Painted_1K_albedo_tif
+    2100010: TrimColor
+    2100012: WallInner
+    2100014: WindowSill
+    2100016: WindowGlow
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall
@@ -52,6 +66,11 @@ ModelImporter:
     2300022: WallNorth
     2300024: WallSouth
     2300026: WallWest
+    2300028: ApartmentInnerWallTrim
+    2300030: ApartmentWindowWall3
+    2300032: WallEast_001
+    2300034: WindowGlow
+    2300036: WindowSill
     3300000: ApartmentCeiling
     3300002: ApartmentHallwayPortal
     3300004: ApartmentInnerWall
@@ -66,6 +85,11 @@ ModelImporter:
     3300022: WallNorth
     3300024: WallSouth
     3300026: WallWest
+    3300028: ApartmentInnerWallTrim
+    3300030: ApartmentWindowWall3
+    3300032: WallEast_001
+    3300034: WindowGlow
+    3300036: WindowSill
     4300000: HallwayWallSouth
     4300002: HallwayCeiling
     4300004: HallwayFloor
@@ -80,6 +104,11 @@ ModelImporter:
     4300022: ApartmentInnerWall
     4300024: ApartnmentFloor
     4300026: ApartmentCeiling
+    4300028: ApartmentInnerWallTrim
+    4300030: WallEast_001
+    4300032: ApartmentWindowWall3
+    4300034: WindowSill
+    4300036: WindowGlow
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
