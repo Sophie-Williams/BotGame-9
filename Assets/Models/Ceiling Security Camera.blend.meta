@@ -22,7 +22,22 @@ ModelImporter:
     4300002: Camera_Body
     7400000: Default Take
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camera_Body
+    second: {fileID: 2100000, guid: 1070db3196626b4478e9f8c045d0982b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camera_Leg
+    second: {fileID: 2100000, guid: 1070db3196626b4478e9f8c045d0982b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camera_Lense
+    second: {fileID: 2100000, guid: 1070db3196626b4478e9f8c045d0982b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

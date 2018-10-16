@@ -20,7 +20,22 @@ ModelImporter:
     3300002: Camera leg
     4300000: Camera leg
     4300002: Camera Body
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camera Body
+    second: {fileID: 2100000, guid: 1070db3196626b4478e9f8c045d0982b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camera Leg
+    second: {fileID: 2100000, guid: 1070db3196626b4478e9f8c045d0982b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Camera Lense
+    second: {fileID: 2100000, guid: 1070db3196626b4478e9f8c045d0982b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -59,7 +74,7 @@ ModelImporter:
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
