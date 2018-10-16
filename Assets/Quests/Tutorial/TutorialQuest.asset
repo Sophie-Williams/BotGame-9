@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b4cbbac4bf77c43a4d6712116d3341, type: 3}
+  m_Name: TutorialQuest
+  m_EditorClassIdentifier: 
+  State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
+  Id: Tutorial
+  Description: Answer the door
+  OnDone:
+  - {fileID: 11400000, guid: 788faa6c23d0f0f42a1664d5a9173a8d, type: 2}
+  Goals:
+  - Id: CameraOne
+    Description: Enter camera one...
+    Event: {fileID: 11400000, guid: ee255964f6e9761418d04409ed9cc8ac, type: 2}
+    OnDone: []
+  - Id: CameraTwo
+    Description: Enter camera two...
+    Event: {fileID: 11400000, guid: f1fd71a59315d454d86b1dcadaf39056, type: 2}
+    OnDone: []
