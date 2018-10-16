@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4373960214835522}
   - component: {fileID: 65328836557563686}
   - component: {fileID: 114403824199372346}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Security Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,8 +139,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262267682164874}
-  m_LocalRotation: {x: 0, y: 0.9816272, z: 0, w: 0.1908091}
-  m_LocalPosition: {x: -4.48, y: 2.3, z: 2.72}
+  m_LocalRotation: {x: -0, y: 0.5708683, z: -0, w: 0.8210417}
+  m_LocalPosition: {x: -2.33, y: 2.4, z: -2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4358401132215028}
