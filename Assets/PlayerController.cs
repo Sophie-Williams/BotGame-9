@@ -5,14 +5,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 	[SerializeField] CameraController CurrentCamera;
 
-	// Update is called once per frame
+	private GameObject currentTarget = null;
+
+	void Start() {
+		FindObjectOfType<HoverController>().OnHoverUpdate += this.OnHoverUpdate;
+	}
+
 	void Update () {
 		CurrentCamera.Rotate(Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical"));
 
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		RaycastHit hit;
-		if (Physics.Raycast(ray, out hit)){
-			CameraController nextCamera = hit.transform.GetComponent<CameraController>();
+		if (Input.GetMouseButton(0) && currentTarget != null) {
+			CameraController nextCamera = currentTarget.GetComponent<CameraController>();
 			if (nextCamera != null) {
 				if (Input.GetMouseButton(0)) {
 					nextCamera.MakeActive();
@@ -20,5 +23,9 @@ public class PlayerController : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	public void OnHoverUpdate(GameObject obj) {
+		currentTarget = obj;
 	}
 }
