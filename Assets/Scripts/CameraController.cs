@@ -4,7 +4,7 @@ using UnityEngine;
 
 [SelectionBase]
 public class CameraController : MonoBehaviour {
-	[SerializeField] Transform CameraRotation;
+	[SerializeField] Transform RotationAxis;
 	[SerializeField] Transform CameraAttachment;
 	[SerializeField] float MinHorizontalAngle; 
 	[SerializeField] float MaxHorizontalAngle;
@@ -13,12 +13,12 @@ public class CameraController : MonoBehaviour {
 
 	[SerializeField][Range(10f, 50f)] float RotationSpeed = 30f;
 
-	private float currentHorizonalRotation;
-	private float currentVerticalRotation;
-	private Quaternion initialRotation;
+	private float horizonalRotation;
+	private float verticalRotation;
+	private Vector3 initialRotation;
 
 	void Start() {
-		initialRotation = CameraRotation.rotation;
+		initialRotation = RotationAxis.localRotation.eulerAngles;
 	}
 
 	public void MakeActive(){
@@ -29,13 +29,16 @@ public class CameraController : MonoBehaviour {
 	}
 
 	public void Rotate(float h, float v) {
-		currentHorizonalRotation = Mathf.Clamp(currentHorizonalRotation + h*Time.deltaTime*RotationSpeed, MinHorizontalAngle, MaxHorizontalAngle);
-		currentVerticalRotation = Mathf.Clamp(currentVerticalRotation + v*Time.deltaTime*RotationSpeed, MinVerticalAngle, MaxVerticalAngle);
-		CameraRotation.rotation = calcRotation(currentHorizonalRotation, currentVerticalRotation);
+		horizonalRotation = Mathf.Clamp(horizonalRotation + h*Time.deltaTime*RotationSpeed, MinHorizontalAngle, MaxHorizontalAngle);
+		verticalRotation = Mathf.Clamp(verticalRotation + v*Time.deltaTime*RotationSpeed, MinVerticalAngle, MaxVerticalAngle);
+		RotationAxis.localRotation = Quaternion.Euler(initialRotation + Vector3.up * horizonalRotation + Vector3.right * verticalRotation);
 	}
 
-	private Quaternion calcRotation(float horizontal, float vertical){
-		return Quaternion.Euler(Vector3.up * horizontal) * Quaternion.Euler(Vector3.forward * vertical) * initialRotation;
+	private void OnDrawGizmosSelected() {
+		Gizmos.DrawRay(RotationAxis.position, RotationAxis.parent.rotation * Quaternion.Euler(initialRotation + Vector3.up * MinHorizontalAngle + Vector3.right) * Vector3.forward);
+		Gizmos.DrawRay(RotationAxis.position, RotationAxis.parent.rotation * Quaternion.Euler(initialRotation + Vector3.up * MaxHorizontalAngle + Vector3.right) * Vector3.forward);
+		Gizmos.DrawRay(RotationAxis.position, RotationAxis.parent.rotation * Quaternion.Euler(initialRotation + Vector3.right * MinVerticalAngle + Vector3.right) * Vector3.forward);
+		Gizmos.DrawRay(RotationAxis.position, RotationAxis.parent.rotation * Quaternion.Euler(initialRotation + Vector3.right * MaxVerticalAngle + Vector3.right) * Vector3.forward);
 	}
 
 }

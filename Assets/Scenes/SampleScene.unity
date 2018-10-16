@@ -270,7 +270,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4373960214835522, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4373960214835522, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -522,7 +522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603901153}
   m_Layer: 0
-  m_Name: CameraRotation
+  m_Name: Rotation Axis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1251,7 +1251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4216b852ac25fb4f8d1ae10f889bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraRotation: {fileID: 603901153}
+  RotationAxis: {fileID: 603901153}
   CameraAttachment: {fileID: 1175620456}
   MinHorizontalAngle: -180
   MaxHorizontalAngle: 180
@@ -1379,7 +1379,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4373960214835522, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.28
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 4373960214835522, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
       propertyPath: m_LocalPosition.z
