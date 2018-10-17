@@ -39,7 +39,7 @@ public class CameraController : Playable
 	/// </summary>
 	public override void Enter()
 	{
-		// NB: disable collider so we don't accidentally raytrace into it.
+		// NB: disable collider to prevent self from activating UI overlay.
 		GetComponent<Collider>().enabled = false;
 
 		Transform CameraTransform = Camera.main.transform;

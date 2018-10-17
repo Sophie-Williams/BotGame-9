@@ -36,10 +36,25 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4373960214835522}
-  - component: {fileID: 65328836557563686}
-  - component: {fileID: 114403824199372346}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Security Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1360663277606676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4826526087994898}
+  - component: {fileID: 65337944979664288}
+  - component: {fileID: 114452222510939190}
+  m_Layer: 9
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +69,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4290290665146796}
   - component: {fileID: 220175812618330040}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Light Probe Group
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,15 +142,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1429262607436060}
-  m_LocalRotation: {x: 0.11320323, y: 0, z: 0, w: 0.9935719}
-  m_LocalPosition: {x: 0, y: -0.15, z: 0}
+  m_LocalRotation: {x: 0.29023612, y: 0.089763306, z: -0.0064519187, w: 0.95271397}
+  m_LocalPosition: {x: -0.0018662622, y: -0.14648986, z: 0.005653814}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4380529229858274}
   - {fileID: 4175975344589860}
   m_Father: {fileID: 4373960214835522}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 13, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 33.654003, y: 11.594001, z: 2.7410002}
 --- !u!4 &4290290665146796
 Transform:
   m_ObjectHideFlags: 1
@@ -168,16 +183,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262267682164874}
-  m_LocalRotation: {x: -0, y: 0.9816272, z: -0, w: 0.1908091}
-  m_LocalPosition: {x: -4.48, y: 2.4, z: 2.72}
+  m_LocalRotation: {x: -0, y: -0.76227874, z: -0, w: 0.6472489}
+  m_LocalPosition: {x: 0.348, y: 2.4, z: -2.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4358401132215028}
   - {fileID: 4217493957455754}
   - {fileID: 4290290665146796}
+  - {fileID: 4826526087994898}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -99.331, z: 0}
 --- !u!4 &4380529229858274
 Transform:
   m_ObjectHideFlags: 1
@@ -190,6 +206,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4217493957455754}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4826526087994898
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360663277606676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4373960214835522}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23569482320069716
 MeshRenderer:
@@ -276,31 +305,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1760268810262200}
   m_Mesh: {fileID: 4300002, guid: fd798f9b3add5c84b933241f2d804704, type: 3}
---- !u!65 &65328836557563686
+--- !u!65 &65337944979664288
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262267682164874}
+  m_GameObject: {fileID: 1360663277606676}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.3, z: 0.4}
   m_Center: {x: 0, y: -0.15, z: 0}
---- !u!114 &114403824199372346
+--- !u!114 &114452222510939190
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1262267682164874}
+  m_GameObject: {fileID: 1360663277606676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4216b852ac25fb4f8d1ae10f889bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Id: CameraOne
   State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
-  Id: 
   RotationAxis: {fileID: 4217493957455754}
   CameraAttachment: {fileID: 4380529229858274}
   MinHorizontalAngle: -60
@@ -308,7 +337,8 @@ MonoBehaviour:
   MinVerticalAngle: -13
   MaxVerticalAngle: 47
   RotationSpeed: 30
-  OnMakeActive: []
+  OnMakeActive:
+  - {fileID: 11400000, guid: ee255964f6e9761418d04409ed9cc8ac, type: 2}
 --- !u!220 &220175812618330040
 LightProbeGroup:
   m_ObjectHideFlags: 1

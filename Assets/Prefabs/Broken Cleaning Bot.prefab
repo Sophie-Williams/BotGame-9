@@ -36,9 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4343302167808630}
-  - component: {fileID: 65091574364069148}
-  - component: {fileID: 114358829874445516}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Broken Cleaning Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,8 +51,25 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4882290110674674}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Camera Attachment
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1581957140582044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4974053765417758}
+  - component: {fileID: 65717617010002992}
+  - component: {fileID: 114044371865113794}
+  m_Layer: 9
+  m_Name: Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4091807876633658}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Rotation Axis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,11 +111,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1283012017639954}
   m_LocalRotation: {x: -0, y: 0.7518136, z: -0, w: 0.65937567}
-  m_LocalPosition: {x: -4.831709, y: 1.547, z: -2.4061966}
+  m_LocalPosition: {x: -4.831709, y: 1.494, z: -2.4061966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4091807876633658}
   - {fileID: 4392239117337358}
+  - {fileID: 4974053765417758}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,6 +145,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4091807876633658}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4974053765417758
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581957140582044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4343302167808630}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23524700876825028
 MeshRenderer:
@@ -173,31 +202,31 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1245340238211384}
   m_Mesh: {fileID: 4300002, guid: a2244a32c1009a04e99b636b0247a92e, type: 3}
---- !u!65 &65091574364069148
+--- !u!65 &65717617010002992
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1283012017639954}
+  m_GameObject: {fileID: 1581957140582044}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.43626368, y: 0.110976815, z: 0.43676025}
   m_Center: {x: 0, y: -0.0741145, z: 0.2816218}
---- !u!114 &114358829874445516
+--- !u!114 &114044371865113794
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1283012017639954}
+  m_GameObject: {fileID: 1581957140582044}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4216b852ac25fb4f8d1ae10f889bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
   Id: FridgeBrokenBot
+  State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
   RotationAxis: {fileID: 4091807876633658}
   CameraAttachment: {fileID: 4882290110674674}
   MinHorizontalAngle: -30

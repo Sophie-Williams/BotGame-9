@@ -6,6 +6,7 @@ public class BotController : Playable
 {
 	[SerializeField] GameState State;
 	[SerializeField] Transform CameraAttachment;
+	[SerializeField] Transform Transform;
 	[SerializeField] [Range(0f, 180)] float RotationSpeed = 90f;
 	[SerializeField] [Range(0.1f, 2f)] float MovementSpeed = 1f;
 	public List<Event> OnMakeActive = new List<Event>();
@@ -32,7 +33,7 @@ public class BotController : Playable
 	/// </summary>
 	public override void Enter()
 	{
-		// NB: disable collider so we don't accidentally raytrace into it.
+		// NB: disable collider to prevent self from activating UI overlay.
 		GetComponent<Collider>().enabled = false;
 
 		Transform CameraTransform = Camera.main.transform;
@@ -57,10 +58,10 @@ public class BotController : Playable
 	public void Move(float h, float v)
 	{
 		// NB: very simple movement, do something that interacts with colission meshes.
-		transform.Rotate(new Vector3(0, h * RotationSpeed * Time.deltaTime, 0), Space.World);
-		transform.Translate(-new Vector3(0, 0, v * MovementSpeed * Time.deltaTime), Space.Self);
+		Transform.Rotate(new Vector3(0, h * RotationSpeed * Time.deltaTime, 0), Space.World);
+		Transform.Translate(-new Vector3(0, 0, v * MovementSpeed * Time.deltaTime), Space.Self);
 
-		botState.Position = transform.position;
-		botState.Rotation = transform.rotation;
+		botState.Position = Transform.position;
+		botState.Rotation = Transform.rotation;
 	}
 }

@@ -76,7 +76,7 @@ public class GameState : ScriptableObject
 		{
 			var found = BotStates.Find(state => state.Id == id);
 
-			if (found != null)
+			if (found != null && !found.UseOriginalPosition)
 			{
 				return found;
 			}
@@ -99,6 +99,7 @@ public class GameState : ScriptableObject
 	public class BotState
 	{
 		public string Id;
+		public bool UseOriginalPosition;
 		public Quaternion Rotation;
 		public Vector3 Position;
 	}

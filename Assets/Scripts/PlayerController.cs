@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,8 +9,6 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
-		FindObjectsOfType<Playable>();
-
 		currentPlayable = State.CurrentPlayable;
 		currentPlayable.Enter();
 		FindObjectOfType<HoverController>().OnHoverUpdate += this.OnHoverUpdate;
