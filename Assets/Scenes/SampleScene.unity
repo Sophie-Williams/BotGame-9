@@ -1947,6 +1947,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1328096080118428, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_Name
+      value: Broken Cleaning Bot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91440782af2386749a075e828d420386, type: 2}
   m_IsPrefabAsset: 0
