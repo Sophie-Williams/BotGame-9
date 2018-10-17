@@ -20,6 +20,12 @@ public class HoverController : MonoBehaviour {
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
 		if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.value)){
+			// NB: only for blocking interactions.
+			if (hit.transform.gameObject.tag == "InteractionCollider")
+			{
+				return;
+			}
+
 			if (hit.transform.gameObject != currentHover) {
 				currentHover = hit.transform.gameObject;
 				OnHoverUpdate.Invoke(currentHover);
