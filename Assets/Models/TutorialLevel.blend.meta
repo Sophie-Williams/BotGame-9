@@ -23,6 +23,12 @@ ModelImporter:
     100034: WallEast_001
     100036: WindowGlow
     100038: WindowSill
+    100040: Apartment
+    100042: ApartmentWall
+    100044: Colliders
+    100046: MidWall
+    100048: InteractionColliders
+    100050: StaticGeometry
     400000: ApartmentCeiling
     400002: ApartmentHallwayPortal
     400004: ApartmentInnerWall
@@ -43,6 +49,12 @@ ModelImporter:
     400034: WallEast_001
     400036: WindowGlow
     400038: WindowSill
+    400040: Apartment
+    400042: ApartmentWall
+    400044: Colliders
+    400046: MidWall
+    400048: InteractionColliders
+    400050: StaticGeometry
     2100000: ApartmentWall
     2100002: ApartmentCeiling
     2100004: ApartmentFloor
@@ -52,6 +64,7 @@ ModelImporter:
     2100012: WallInner
     2100014: WindowSill
     2100016: WindowGlow
+    2100018: unnamed
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall
@@ -71,6 +84,8 @@ ModelImporter:
     2300032: WallEast_001
     2300034: WindowGlow
     2300036: WindowSill
+    2300038: ApartmentWall
+    2300040: MidWall
     3300000: ApartmentCeiling
     3300002: ApartmentHallwayPortal
     3300004: ApartmentInnerWall
@@ -90,6 +105,8 @@ ModelImporter:
     3300032: WallEast_001
     3300034: WindowGlow
     3300036: WindowSill
+    3300038: ApartmentWall
+    3300040: MidWall
     4300000: HallwayWallSouth
     4300002: HallwayCeiling
     4300004: HallwayFloor
@@ -109,6 +126,10 @@ ModelImporter:
     4300032: ApartmentWindowWall3
     4300034: WindowSill
     4300036: WindowGlow
+    4300038: ApartmentWall
+    4300040: MidWall
+    6400000: ApartmentWall
+    6400002: MidWall
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

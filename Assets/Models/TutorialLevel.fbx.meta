@@ -27,6 +27,11 @@ ModelImporter:
     100042: WallEast.001
     100044: WindowGlow
     100046: WindowSill
+    100048: ApartmentWall
+    100050: Colliders
+    100052: MidWall
+    100054: InteractionColliders
+    100056: StaticGeometry
     400000: Apartment
     400002: ApartmentCeiling
     400004: ApartmentHallwayPortal
@@ -51,6 +56,11 @@ ModelImporter:
     400042: WallEast.001
     400044: WindowGlow
     400046: WindowSill
+    400048: ApartmentWall
+    400050: Colliders
+    400052: MidWall
+    400054: InteractionColliders
+    400056: StaticGeometry
     2000000: Camera
     2100000: ApartmentWall
     2100002: ApartmentCeiling
@@ -59,6 +69,7 @@ ModelImporter:
     2100008: TrimColor
     2100010: WindowSill
     2100012: WindowGlow
+    2100014: No Name
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall
@@ -78,6 +89,8 @@ ModelImporter:
     2300032: WallEast.001
     2300034: WindowGlow
     2300036: WindowSill
+    2300038: ApartmentWall
+    2300040: MidWall
     3300000: ApartmentCeiling
     3300002: ApartmentHallwayPortal
     3300004: ApartmentInnerWall
@@ -97,6 +110,8 @@ ModelImporter:
     3300032: WallEast.001
     3300034: WindowGlow
     3300036: WindowSill
+    3300038: ApartmentWall
+    3300040: MidWall
     4300000: HallwayWallSouth
     4300002: HallwayCeiling
     4300004: HallwayFloor
@@ -116,6 +131,10 @@ ModelImporter:
     4300032: ApartmentWindowWall3
     4300034: WindowSill
     4300036: WindowGlow
+    4300038: ApartmentWall
+    4300040: MidWall
+    6400000: ApartmentWall
+    6400002: MidWall
     10800000: Lamp
     10800002: Lamp.001
   externalObjects:
