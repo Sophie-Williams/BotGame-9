@@ -168,8 +168,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1262267682164874}
-  m_LocalRotation: {x: -0, y: 0.5708683, z: -0, w: 0.8210417}
-  m_LocalPosition: {x: -2.33, y: 2.4, z: -2.6}
+  m_LocalRotation: {x: -0, y: 0.9816272, z: -0, w: 0.1908091}
+  m_LocalPosition: {x: -4.48, y: 2.4, z: 2.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4358401132215028}
@@ -299,6 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4216b852ac25fb4f8d1ae10f889bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
+  Id: 
   RotationAxis: {fileID: 4217493957455754}
   CameraAttachment: {fileID: 4380529229858274}
   MinHorizontalAngle: -60

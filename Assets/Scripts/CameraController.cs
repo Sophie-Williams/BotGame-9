@@ -5,6 +5,8 @@ using UnityEngine;
 [SelectionBase]
 public class CameraController : Playable
 {
+	[SerializeField] GameState State;
+
 	[SerializeField] Transform RotationAxis;
 	[SerializeField] Transform CameraAttachment;
 	[SerializeField] float MinHorizontalAngle;
@@ -14,13 +16,14 @@ public class CameraController : Playable
 	[SerializeField] [Range(10f, 50f)] float RotationSpeed = 30f;
 	public List<Event> OnMakeActive = new List<Event>();
 
-	private float horizonalRotation;
-	private float verticalRotation;
+	private GameState.CameraState cameraState;
 	private Vector3 initialRotation;
 
 	void Start()
 	{
 		initialRotation = RotationAxis.localRotation.eulerAngles;
+		cameraState = State.GetCameraState(Id);
+		Apply();
 	}
 
 	/// <summary>
@@ -60,9 +63,17 @@ public class CameraController : Playable
 
 	public void Rotate(float h, float v)
 	{
-		horizonalRotation = Mathf.Clamp(horizonalRotation + h * Time.deltaTime * RotationSpeed, MinHorizontalAngle, MaxHorizontalAngle);
-		verticalRotation = Mathf.Clamp(verticalRotation + v * Time.deltaTime * RotationSpeed, MinVerticalAngle, MaxVerticalAngle);
-		RotationAxis.localRotation = Quaternion.Euler(initialRotation + Vector3.up * horizonalRotation + Vector3.right * verticalRotation);
+		cameraState.HorizontalRotation = Mathf.Clamp(cameraState.HorizontalRotation + h * Time.deltaTime * RotationSpeed, MinHorizontalAngle, MaxHorizontalAngle);
+		cameraState.VerticalRotation = Mathf.Clamp(cameraState.VerticalRotation + v * Time.deltaTime * RotationSpeed, MinVerticalAngle, MaxVerticalAngle);
+		Apply();
+	}
+
+	/// <summary>
+	/// Apply all state.
+	/// </summary>
+	void Apply()
+	{
+		RotationAxis.localRotation = Quaternion.Euler(initialRotation + Vector3.up * cameraState.HorizontalRotation + Vector3.right * cameraState.VerticalRotation);
 	}
 
 	private void OnDrawGizmosSelected()

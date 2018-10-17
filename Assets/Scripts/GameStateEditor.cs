@@ -2,7 +2,8 @@
 using UnityEditor;
 
 [CustomEditor(typeof(GameState))]
-public class GameStateEditor : Editor {
+public class GameStateEditor : Editor
+{
 	GameState state;
 
 	public void OnEnable()
@@ -16,6 +17,13 @@ public class GameStateEditor : Editor {
 
 		if (GUILayout.Button("Reset All"))
 		{
+			state.Completed.Clear();
+			state.CameraStates.Clear();
+		}
+
+		if (GUILayout.Button("Reset All Quests"))
+		{
+
 			state.Completed.Clear();
 		}
 

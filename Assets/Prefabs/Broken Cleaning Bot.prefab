@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4216b852ac25fb4f8d1ae10f889bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
+  Id: FridgeBrokenBot
   RotationAxis: {fileID: 4091807876633658}
   CameraAttachment: {fileID: 4882290110674674}
   MinHorizontalAngle: -30

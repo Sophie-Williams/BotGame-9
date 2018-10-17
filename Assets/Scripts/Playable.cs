@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 
-public abstract class Playable : MonoBehaviour {
+public abstract class Playable : MonoBehaviour
+{
+	/// <summary>
+	/// Identifier into the game state for recording (and retrieving) horizontal rotation.
+	/// </summary>
+	[SerializeField] public string Id;
+
 	/// <summary>
 	/// Deferred update called by the PlayerController.
 	/// 

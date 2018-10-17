@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	[SerializeField] Playable CurrentPlayable;
+	[SerializeField] GameState State;
 
+	private Playable currentPlayable;
 	private GameObject currentTarget = null;
 
 	void Start()
 	{
-		CurrentPlayable.Enter();
+		FindObjectsOfType<Playable>();
+
+		currentPlayable = State.CurrentPlayable;
+		currentPlayable.Enter();
 		FindObjectOfType<HoverController>().OnHoverUpdate += this.OnHoverUpdate;
 	}
 
 	void Update()
 	{
-		CurrentPlayable.PlayableUpdate();
+		currentPlayable.PlayableUpdate();
 
 		if (Input.GetMouseButton(0) && currentTarget != null)
 		{
@@ -27,8 +31,13 @@ public class PlayerController : MonoBehaviour
 				if (Input.GetMouseButton(0))
 				{
 					nextPlayable.Enter();
-					CurrentPlayable.Leave();
-					CurrentPlayable = nextPlayable;
+					currentPlayable.Leave();
+					currentPlayable = nextPlayable;
+
+					if (currentPlayable.Id != null && currentPlayable.Id != "")
+					{
+						State.CurrentPlayableId = currentPlayable.Id;
+					}
 				}
 			}
 		}
