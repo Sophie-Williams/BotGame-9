@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [SelectionBase]
-public class CameraController : MonoBehaviour
+public class CameraController : Playable
 {
 	[SerializeField] Transform RotationAxis;
 	[SerializeField] Transform CameraAttachment;
@@ -24,9 +24,17 @@ public class CameraController : MonoBehaviour
 	}
 
 	/// <summary>
+	/// Cameras can be rotated by using horizontal and vertical inputs.
+	/// </summary>
+	public override void PlayableUpdate()
+	{
+		Rotate(Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical"));
+	}
+
+	/// <summary>
 	/// Called when entering a controller.
 	/// </summary>
-	public void MakeActive()
+	public override void Enter()
 	{
 		// NB: disable collider so we don't accidentally raytrace into it.
 		GetComponent<Collider>().enabled = false;
@@ -45,7 +53,7 @@ public class CameraController : MonoBehaviour
 	/// <summary>
 	/// Called when leaving a controller.
 	/// </summary>
-	public void Leave()
+	public override void Leave()
 	{
 		GetComponent<Collider>().enabled = true;
 	}

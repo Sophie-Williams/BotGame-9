@@ -2,31 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
-	[SerializeField] CameraController CurrentCamera;
+public class PlayerController : MonoBehaviour
+{
+	[SerializeField] Playable CurrentPlayable;
 
 	private GameObject currentTarget = null;
 
-	void Start() {
+	void Start()
+	{
+		CurrentPlayable.Enter();
 		FindObjectOfType<HoverController>().OnHoverUpdate += this.OnHoverUpdate;
 	}
 
-	void Update () {
-		CurrentCamera.Rotate(Input.GetAxis("Horizontal"), -Input.GetAxis("Vertical"));
+	void Update()
+	{
+		CurrentPlayable.PlayableUpdate();
 
-		if (Input.GetMouseButton(0) && currentTarget != null) {
-			CameraController nextCamera = currentTarget.GetComponent<CameraController>();
-			if (nextCamera != null) {
-				if (Input.GetMouseButton(0)) {
-					nextCamera.MakeActive();
-					CurrentCamera.Leave();
-					CurrentCamera = nextCamera;
+		if (Input.GetMouseButton(0) && currentTarget != null)
+		{
+			Playable nextPlayable = currentTarget.GetComponent<Playable>();
+
+			if (nextPlayable != null)
+			{
+				if (Input.GetMouseButton(0))
+				{
+					nextPlayable.Enter();
+					CurrentPlayable.Leave();
+					CurrentPlayable = nextPlayable;
 				}
 			}
 		}
 	}
 
-	public void OnHoverUpdate(GameObject obj) {
+	public void OnHoverUpdate(GameObject obj)
+	{
 		currentTarget = obj;
 	}
 }
