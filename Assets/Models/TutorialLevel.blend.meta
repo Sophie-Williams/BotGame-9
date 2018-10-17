@@ -65,6 +65,7 @@ ModelImporter:
     2100014: WindowSill
     2100016: WindowGlow
     2100018: unnamed
+    2100020: WindowBorder
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall

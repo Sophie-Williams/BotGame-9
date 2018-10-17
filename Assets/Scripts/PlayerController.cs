@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour {
 			if (nextCamera != null) {
 				if (Input.GetMouseButton(0)) {
 					nextCamera.MakeActive();
+					CurrentCamera.Leave();
 					CurrentCamera = nextCamera;
 				}
 			}

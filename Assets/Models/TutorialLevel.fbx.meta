@@ -70,6 +70,7 @@ ModelImporter:
     2100010: WindowSill
     2100012: WindowGlow
     2100014: No Name
+    2100016: WindowBorder
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall
@@ -163,6 +164,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: WallInner
     second: {fileID: 2100000, guid: 91fd92d9ea16c4842ad3cd214d0b241b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WindowBorder
+    second: {fileID: 2100000, guid: c0c40e06d65f34947997a97e1c1e1d13, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

@@ -23,8 +23,14 @@ public class CameraController : MonoBehaviour
 		initialRotation = RotationAxis.localRotation.eulerAngles;
 	}
 
+	/// <summary>
+	/// Called when entering a controller.
+	/// </summary>
 	public void MakeActive()
 	{
+		// NB: disable collider so we don't accidentally raytrace into it.
+		GetComponent<Collider>().enabled = false;
+
 		Transform CameraTransform = Camera.main.transform;
 		CameraTransform.parent = CameraAttachment;
 		CameraTransform.localPosition = Vector3.zero;
@@ -34,6 +40,14 @@ public class CameraController : MonoBehaviour
 		{
 			StartCoroutine(e.Fire());
 		}
+	}
+
+	/// <summary>
+	/// Called when leaving a controller.
+	/// </summary>
+	public void Leave()
+	{
+		GetComponent<Collider>().enabled = true;
 	}
 
 	public void Rotate(float h, float v)

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Name: GameState
   m_EditorClassIdentifier: 
   CurrentQuest: {fileID: 11400000, guid: 5f792c23597aee14e9f1473ff397e03c, type: 2}
-  Completed: []
+  Completed:
+  - Tutorial/CameraOne
+  - Tutorial/CameraTwo
+  - Tutorial
