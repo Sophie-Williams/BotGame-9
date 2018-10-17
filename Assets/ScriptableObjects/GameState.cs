@@ -4,7 +4,9 @@ using System.Collections.Generic;
 [CreateAssetMenu(menuName = "Global/GameState")]
 public class GameState : ScriptableObject
 {
-	public string CurrentPlayableId = "SteveAI";
+	public const string DEFAULT_PLAYABLE_ID = "SteveAI";
+
+	public string CurrentPlayableId = DEFAULT_PLAYABLE_ID;
 	public Quest CurrentQuest;
 	public List<string> Completed = new List<string>();
 	public List<CameraState> CameraStates = new List<CameraState>();

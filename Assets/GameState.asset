@@ -13,7 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPlayableId: SteveAI
   CurrentQuest: {fileID: 11400000, guid: 5f792c23597aee14e9f1473ff397e03c, type: 2}
-  Completed:
-  - Tutorial/CameraOne
-  - Tutorial/CameraTwo
-  - Tutorial
+  Completed: []
+  CameraStates: []
+  BotStates: []

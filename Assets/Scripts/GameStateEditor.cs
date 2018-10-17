@@ -17,15 +17,18 @@ public class GameStateEditor : Editor
 
 		if (GUILayout.Button("Reset All"))
 		{
+			state.CurrentPlayableId = GameState.DEFAULT_PLAYABLE_ID;
 			state.Completed.Clear();
 			state.CameraStates.Clear();
 			state.BotStates.Clear();
+			EditorUtility.SetDirty(state);
 		}
 
 		if (GUILayout.Button("Reset All Quests"))
 		{
 
 			state.Completed.Clear();
+			EditorUtility.SetDirty(state);
 		}
 
 		if (GUILayout.Button("Reset Current Quest"))
@@ -36,6 +39,8 @@ public class GameStateEditor : Editor
 			{
 				state.Completed.Remove(state.CurrentQuest.Id + "/" + goal.Id);
 			}
+
+			EditorUtility.SetDirty(state);
 		}
 	}
 }
