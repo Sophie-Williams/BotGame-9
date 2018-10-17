@@ -4,10 +4,20 @@ using UnityEngine;
 [SelectionBase]
 public class BotController : Playable
 {
+	[SerializeField] GameState State;
 	[SerializeField] Transform CameraAttachment;
 	[SerializeField] [Range(0f, 180)] float RotationSpeed = 90f;
 	[SerializeField] [Range(0.1f, 2f)] float MovementSpeed = 1f;
 	public List<Event> OnMakeActive = new List<Event>();
+
+	private GameState.BotState botState;
+
+	public void Start()
+	{
+		botState = State.GetOrSetBotState(Id, transform.position, transform.rotation);
+		transform.rotation = botState.Rotation;
+		transform.position = botState.Position;
+	}
 
 	/// <summary>
 	/// Cameras can be rotated by using horizontal and vertical inputs.
@@ -49,5 +59,8 @@ public class BotController : Playable
 		// NB: very simple movement, do something that interacts with colission meshes.
 		transform.Rotate(new Vector3(0, h * RotationSpeed * Time.deltaTime, 0), Space.World);
 		transform.Translate(-new Vector3(0, 0, v * MovementSpeed * Time.deltaTime), Space.Self);
+
+		botState.Position = transform.position;
+		botState.Rotation = transform.rotation;
 	}
 }

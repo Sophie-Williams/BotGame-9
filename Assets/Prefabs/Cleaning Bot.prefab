@@ -196,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cf898c3728099429d087ab064e8fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Id: FloorBot
+  State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
   CameraAttachment: {fileID: 4227871022507006}
   RotationSpeed: 90
   MovementSpeed: 1

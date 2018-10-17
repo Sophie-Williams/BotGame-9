@@ -8,6 +8,7 @@ public class GameState : ScriptableObject
 	public Quest CurrentQuest;
 	public List<string> Completed = new List<string>();
 	public List<CameraState> CameraStates = new List<CameraState>();
+	public List<BotState> BotStates = new List<BotState>();
 
 	private void OnEnable()
 	{
@@ -60,11 +61,43 @@ public class GameState : ScriptableObject
 		return newState;
 	}
 
+	/// <summary>
+	/// Get bot state if present, or set it to the initial state.
+	/// </summary>
+	/// <param name="id">id of the bot to get</param>
+	/// <param name="initial">the initial state to set if not present</param>
+	/// <returns></returns>
+	public BotState GetOrSetBotState(string id, Vector3 initialPosition, Quaternion initialRotation)
+	{
+		// NB: if no ID is specified, do not persist state.
+		if (id != null && id != "")
+		{
+			var found = BotStates.Find(state => state.Id == id);
+
+			if (found != null)
+			{
+				return found;
+			}
+		}
+
+		BotState newState = new BotState { Id = id, Position = initialPosition, Rotation = initialRotation };
+		BotStates.Add(newState);
+		return newState;
+	}
+
 	[System.Serializable]
 	public class CameraState
 	{
 		public string Id;
 		public float HorizontalRotation;
 		public float VerticalRotation;
+	}
+
+	[System.Serializable]
+	public class BotState
+	{
+		public string Id;
+		public Quaternion Rotation;
+		public Vector3 Position;
 	}
 }

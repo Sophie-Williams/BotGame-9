@@ -19,6 +19,7 @@ public class GameStateEditor : Editor
 		{
 			state.Completed.Clear();
 			state.CameraStates.Clear();
+			state.BotStates.Clear();
 		}
 
 		if (GUILayout.Button("Reset All Quests"))
