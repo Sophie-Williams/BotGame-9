@@ -9,26 +9,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c665f51bdb264ca478334520827ce5c9, type: 3}
-  m_Name: KnockDialogue
+  m_Name: JeffComplainingDialogue
   m_EditorClassIdentifier: 
-  Audio: {fileID: 8300000, guid: 5c1807bf1251dc44990fd90c11c67f55, type: 3}
+  Audio: {fileID: 8300000, guid: 5efdf188cf9e8ef43a5bee00ecb22069, type: 3}
   SubtitleSystem: {fileID: 11400000, guid: 566ac0d24f55882409e65ccd0329f723, type: 2}
   Snippets:
   - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
-    Text: knock on door
-    Delay: 0
-    Time: 1
-    ClosedCaption: 1
-    DisplaySource: 0
+    Text: Hello, this is Jeff - your landlord,
+    Delay: 0.5
+    Time: 2
+    ClosedCaption: 0
+    DisplaySource: 1
   - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
-    Text: 
+    Text: I'm still waiting for your rent this month.
     Delay: 0
-    Time: 1.2
+    Time: 2.5
     ClosedCaption: 0
     DisplaySource: 0
   - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
-    Text: more knocking
+    Text: If you're not gonna pay it ...
     Delay: 0
-    Time: 1
-    ClosedCaption: 1
+    Time: 1.5
+    ClosedCaption: 0
+    DisplaySource: 0
+  - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
+    Text: I will shut down your utilities.
+    Delay: 0
+    Time: 2
+    ClosedCaption: 0
     DisplaySource: 0

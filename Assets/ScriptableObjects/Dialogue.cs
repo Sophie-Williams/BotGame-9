@@ -2,16 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Dialogue")]
+[CreateAssetMenu(menuName = "Dialogue/Dialogue")]
 public class Dialogue : ScriptableObject
 {
 	public AudioClip Audio;
 	public SubtitleSystem SubtitleSystem;
-	public List<DialogueSnippet> Snippets;
+	public List<Snippet> Snippets;
 
 	[System.Serializable]
-	public class DialogueSnippet
+	public class Snippet
 	{
+		/// <summary>
+		/// What is the source of this sound.
+		/// 
+		/// Can be used if the source is not visible.
+		/// </summary>
+		public DialogueSource Source;
+
+		/// <summary>
+		/// Text that will stay on screen.
+		/// </summary>
+		public string Text;
+
 		/// <summary>
 		/// Time to delay until snippet should be played.
 		/// </summary>
@@ -23,16 +35,16 @@ public class Dialogue : ScriptableObject
 		public float Time;
 
 		/// <summary>
-		/// Text that will stay on screen.
-		/// </summary>
-		public string Text;
-
-		/// <summary>
 		/// Closed subtitles are audio hints, and are encapsulated in brackets.
 		/// 
 		/// They indicate things that you normally can't hear.
 		/// </summary>
 		public bool ClosedCaption = false;
+
+		/// <summary>
+		/// Force displaying the source, in case that is unclear.
+		/// </summary>
+		public bool DisplaySource = false;
 	}
 
 	/// <summary>
@@ -46,7 +58,7 @@ public class Dialogue : ScriptableObject
 
 		foreach (var snippet in Snippets)
 		{
-			yield return SubtitleSystem.RunDialogueSnippet(snippet);
+			yield return SubtitleSystem.RunDialogueSnippet(this, snippet);
 		}
 
 		SubtitleSystem.Clear();

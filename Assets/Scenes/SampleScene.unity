@@ -543,7 +543,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &486358713
 RectTransform:
   m_ObjectHideFlags: 0
@@ -658,11 +658,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1267,7 +1267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2b53c2701bc09741a254dbc0e16a3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue: {fileID: 11400000, guid: b790361abcf25c648bf284b7cd9cca19, type: 2}
+  Dialogue:
+  - {fileID: 11400000, guid: b790361abcf25c648bf284b7cd9cca19, type: 2}
+  - {fileID: 11400000, guid: 40c2e05ab23077c4487d1848cf204e3c, type: 2}
   Event: {fileID: 11400000, guid: 788faa6c23d0f0f42a1664d5a9173a8d, type: 2}
   OnDone: {fileID: 11400000, guid: d516ad30ade0fad4f99e81272c8d819c, type: 2}
 --- !u!82 &1006988226

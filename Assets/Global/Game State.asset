@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e92d5686b1aab6246b5ae46d95c49743, type: 3}
-  m_Name: GameState
+  m_Name: Game State
   m_EditorClassIdentifier: 
   CurrentPlayableId: SteveAI
   CurrentQuest: {fileID: 11400000, guid: 5f792c23597aee14e9f1473ff397e03c, type: 2}

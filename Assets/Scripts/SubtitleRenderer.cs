@@ -9,16 +9,25 @@ public partial class SubtitleRenderer : MonoBehaviour
 
 	private string currentText;
 	private string renderedText;
+	private DialogueSource currentSource = null;
+	private Color currentColor = Color.white;
 
-	public void OnShowText(string text)
+	public void OnShowText(Dialogue.Snippet snippet)
 	{
-		Label.SetText(text);
+		var t = "\"" + snippet.Text + "\"";
+
+		if (SetSource(snippet.Source) && snippet.DisplaySource)
+			t = snippet.Source.Name + ": " + t;
+
+		Label.SetText(t);
 		Label.gameObject.SetActive(true);
 	}
 
-	public void OnShowClosedCaption(string text)
+	public void OnShowClosedCaption(Dialogue.Snippet snippet)
 	{
-		Label.SetText("[" + text + "]");
+		SetSource(snippet.Source);
+		Label.color = Color.white;
+		Label.SetText("[" + snippet.Text + "]");
 		Label.gameObject.SetActive(true);
 	}
 
@@ -26,6 +35,7 @@ public partial class SubtitleRenderer : MonoBehaviour
 	{
 		Label.gameObject.SetActive(false);
 		Label.SetText("");
+		currentSource = null;
 	}
 
 	void Start()
@@ -44,5 +54,36 @@ public partial class SubtitleRenderer : MonoBehaviour
 	void Update()
 	{
 		Label.alignment = TMPro.TextAlignmentOptions.Top;
+	}
+
+	/// <summary>
+	/// Sets the color of the text according to the source.
+	/// </summary>
+	private bool SetSource(DialogueSource source)
+	{
+		var changed = false;
+
+		if (currentSource != source)
+		{
+			currentSource = source;
+			changed = true;
+		}
+
+		if (currentSource != null)
+		{
+			if (Label.color != currentSource.SubtitleColor)
+			{
+				Label.color = currentSource.SubtitleColor;
+			}
+		}
+		else
+		{
+			if (Label.color != Color.white)
+			{
+				Label.color = Color.white;
+			}
+		}
+
+		return changed;
 	}
 }

@@ -8,11 +8,11 @@ public class SubtitleSystem : ScriptableObject
 	public bool Enabled;
 	public bool ClosedCaptions = true;
 
-	public delegate void OnShowTextHandler(string text);
+	public delegate void OnSnippetHandler(Dialogue.Snippet snippet);
 	public delegate void OnClearTextHandler();
 
-	public event OnShowTextHandler OnShowText;
-	public event OnShowTextHandler OnShowClosedCaption;
+	public event OnSnippetHandler OnShowText;
+	public event OnSnippetHandler OnShowClosedCaption;
 	public event OnClearTextHandler OnClearText;
 
 	/// <summary>
@@ -20,7 +20,7 @@ public class SubtitleSystem : ScriptableObject
 	/// </summary>
 	/// <param name="snippet"></param>
 	/// <returns></returns>
-	public IEnumerator RunDialogueSnippet(Dialogue.DialogueSnippet snippet)
+	public IEnumerator RunDialogueSnippet(Dialogue dialogue, Dialogue.Snippet snippet)
 	{
 		if (!Enabled)
 		{
@@ -44,13 +44,17 @@ public class SubtitleSystem : ScriptableObject
 		{
 			if (snippet.ClosedCaption)
 			{
-				if (OnShowClosedCaption != null)
-					OnShowClosedCaption.Invoke(snippet.Text);
+				if (ClosedCaptions && OnShowClosedCaption != null)
+				{
+					OnShowClosedCaption.Invoke(snippet);
+				}
 			}
 			else
 			{
 				if (OnShowText != null)
-					OnShowText.Invoke(snippet.Text);
+				{
+					OnShowText.Invoke(snippet);
+				}
 			}
 		}
 

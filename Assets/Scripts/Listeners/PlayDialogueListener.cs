@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -6,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class PlayDialogueListener : MonoBehaviour, Event.Listener
 {
-	public Dialogue Dialogue;
+	public List<Dialogue> Dialogue = new List<Dialogue>();
 	public Event Event = null;
 	public Event OnDone = null;
 
@@ -32,9 +33,9 @@ public class PlayDialogueListener : MonoBehaviour, Event.Listener
 
 	public IEnumerator Fire()
 	{
-		if (Dialogue != null)
+		foreach (var d in Dialogue)
 		{
-			yield return Dialogue.RunDialogue(Source);
+			yield return d.RunDialogue(Source);
 		}
 
 		if (OnDone != null)
