@@ -720,36 +720,41 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114559544475738122, guid: 91440782af2386749a075e828d420386,
-        type: 2}
-      propertyPath: Id
-      value: FloorBot
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.656
       objectReference: {fileID: 0}
-    - target: {fileID: 114922600940581268, guid: 91440782af2386749a075e828d420386,
-        type: 2}
-      propertyPath: Display
-      value: Crappy Cleaning Bot
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.000000029802322
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.394
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.18781836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000029802319
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000001862645
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.98220384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009561304549480, guid: 91440782af2386749a075e828d420386, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 21.651001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91440782af2386749a075e828d420386, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &561129014 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1738647118738234, guid: 91440782af2386749a075e828d420386,
-    type: 2}
-  m_PrefabInternal: {fileID: 561129013}
---- !u!114 &561129015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561129014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Id: FloorBot
 --- !u!1 &603901152
 GameObject:
   m_ObjectHideFlags: 0

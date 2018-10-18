@@ -36,10 +36,14 @@ public class PlaySoundListener : MonoBehaviour, Event.Listener
 	{
 		Source.clip = Audio;
 		Source.Play();
-		yield return new WaitWhile(() => Source.isPlaying);
 
 		if (OnPlayed != null)
-			OnPlayed.Invoke();
+		{
+			yield return new WaitWhile(() => Source.isPlaying);
+
+			if (OnPlayed != null)
+				OnPlayed.Invoke();
+		}
 
 		yield break;
 	}

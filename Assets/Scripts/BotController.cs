@@ -7,8 +7,9 @@ public class BotController : Playable
 	[SerializeField] GameState State;
 	[SerializeField] Transform CameraAttachment;
 	[SerializeField] Transform Transform;
+	[SerializeField] Rigidbody Body;
 	[SerializeField] [Range(0f, 180)] float RotationSpeed = 90f;
-	[SerializeField] [Range(0.1f, 2f)] float MovementSpeed = 1f;
+	[SerializeField] [Range(0.1f, 2f)] float MovementSpeed = 5f;
 	public List<Event> OnMakeActive = new List<Event>();
 
 	private GameState.BotState botState;
@@ -58,9 +59,19 @@ public class BotController : Playable
 
 	public void Move(float h, float v)
 	{
-		// NB: very simple movement, do something that interacts with colission meshes.
-		Transform.Rotate(new Vector3(0, h * RotationSpeed * Time.deltaTime, 0), Space.World);
-		Transform.Translate(-new Vector3(0, 0, v * MovementSpeed * Time.deltaTime), Space.Self);
+		Vector3 movement = new Vector3(0, 0, -v) * MovementSpeed * Time.deltaTime;
+		Quaternion deltaRotation = Quaternion.Euler(0, h * RotationSpeed * Time.deltaTime, 0);
+
+		Debug.Log(Transform);
+
+		Body.MovePosition(Transform.position + Transform.rotation * movement);
+		Body.MoveRotation(Transform.rotation * deltaRotation);
+
+		if (Transform.position.y < -100f)
+		{
+			Transform.position = botState.InitialPosition;
+			Transform.rotation = botState.InitialRotation;
+		}
 
 		botState.Position = Transform.position;
 		botState.Rotation = Transform.rotation;

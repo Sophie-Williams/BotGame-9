@@ -71,6 +71,7 @@ GameObject:
   - component: {fileID: 65125996369619610}
   - component: {fileID: 114559544475738122}
   - component: {fileID: 114922600940581268}
+  - component: {fileID: 114965696027857110}
   m_Layer: 9
   m_Name: Controller
   m_TagString: Untagged
@@ -98,7 +99,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1216262025173468}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0, y: 0, z: 0.2483}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4690041783981752}
@@ -189,7 +190,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!65 &65125996369619610
 BoxCollider:
@@ -201,8 +202,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42893243, y: 0.14112508, z: 0.4562831}
-  m_Center: {x: -0.00000036601116, y: 0.03105338, z: 0.28292736}
+  m_Size: {x: 0.37150937, y: 0.063897684, z: 0.40979737}
+  m_Center: {x: -0.0000000017749429, y: 0.031948842, z: 0.034217235}
 --- !u!65 &65298714074477316
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -213,8 +214,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.37150937, y: 0.056788, z: 0.3961879}
-  m_Center: {x: -0.00000022464644, y: 0.028394, z: 0.2829276}
+  m_Size: {x: 0.37150937, y: 0.063897684, z: 0.40979737}
+  m_Center: {x: -0.0000000017749429, y: 0.031948842, z: 0.034217235}
 --- !u!114 &114559544475738122
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,10 +227,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cf898c3728099429d087ab064e8fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 
   State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
   CameraAttachment: {fileID: 4009561304549480}
   Transform: {fileID: 4690041783981752}
+  Body: {fileID: 54696989006918326}
   RotationSpeed: 90
   MovementSpeed: 1
   OnMakeActive: []
@@ -244,4 +245,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edb6f09a1317c24db2674eacf8288eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Display: 
+  Display: Crappy Cleaning Bot
+--- !u!114 &114965696027857110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1738647118738234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: FloorBot
