@@ -21,8 +21,9 @@ public class GameState : ScriptableObject
 	{
 		get
 		{
-			foreach (Playable playable in FindObjectsOfType<Playable>()) {
-				if (playable.LookupId() == CurrentPlayableId)
+			foreach (Playable playable in FindObjectsOfType<Playable>())
+			{
+				if (playable.Id == CurrentPlayableId)
 					return playable;
 			}
 
@@ -111,7 +112,8 @@ public class GameState : ScriptableObject
 			}
 		}
 
-		EntityTransform newState = new EntityTransform {
+		EntityTransform newState = new EntityTransform
+		{
 			Id = id,
 			InitialPosition = initial.position,
 			Position = initial.position,

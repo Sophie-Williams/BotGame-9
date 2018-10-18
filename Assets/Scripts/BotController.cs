@@ -15,8 +15,7 @@ public class BotController : Playable
 
 	public void Start()
 	{
-		var info = GetComponent<PlayableInfo>();
-		entityTransform = State.GetEntityTransform(info.Id, Body.transform);
+		entityTransform = State.GetEntityTransform(Id, Body.transform);
 		ApplyState();
 	}
 

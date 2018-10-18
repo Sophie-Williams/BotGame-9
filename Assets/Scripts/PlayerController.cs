@@ -54,11 +54,10 @@ public class PlayerController : MonoBehaviour
 
 		currentPlayable = next;
 
-		var id = currentPlayable.LookupId();
-
-		if (id != "")
+		// NB: only update if it has an ID assigned.
+		if (currentPlayable.Id != "")
 		{
-			State.CurrentPlayableId = id;
+			State.CurrentPlayableId = currentPlayable.Id;
 		}
 	}
 

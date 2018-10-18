@@ -2,15 +2,12 @@
 
 public abstract class Playable : MonoBehaviour
 {
-	public string LookupId()
-	{
-		var info = GetComponent<PlayableInfo>();
-
-		if (info != null)
-			return info.Id;
-
-		return "";
-	}
+	/// <summary>
+	/// Unique identifier used to distinguish this playable.
+	/// 
+	/// This is used to index the playable in the game state, and must therefore be unique.
+	/// </summary>
+	[SerializeField] public string Id;
 
 	/// <summary>
 	/// Apply the global state to the given playable.

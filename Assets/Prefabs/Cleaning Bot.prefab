@@ -71,7 +71,6 @@ GameObject:
   - component: {fileID: 65125996369619610}
   - component: {fileID: 114559544475738122}
   - component: {fileID: 114922600940581268}
-  - component: {fileID: 114965696027857110}
   m_Layer: 9
   m_Name: Controller
   m_TagString: Untagged
@@ -227,9 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0cf898c3728099429d087ab064e8fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Id: 
   State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
   CameraAttachment: {fileID: 4009561304549480}
-  Transform: {fileID: 4690041783981752}
   Body: {fileID: 54696989006918326}
   RotationSpeed: 90
   MovementSpeed: 1
@@ -245,16 +244,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edb6f09a1317c24db2674eacf8288eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Display: Crappy Cleaning Bot
---- !u!114 &114965696027857110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1738647118738234}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Id: FloorBot
+  Display: 
