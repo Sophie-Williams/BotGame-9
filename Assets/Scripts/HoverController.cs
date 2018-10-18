@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class HoverController : MonoBehaviour {
+public class HoverController : MonoBehaviour
+{
 	public delegate void HoverUpdateAction(GameObject obj);
 	public event HoverUpdateAction OnHoverUpdate;
 
@@ -8,33 +9,40 @@ public class HoverController : MonoBehaviour {
 	[SerializeField] LayerMask LayerMask;
 	private GameObject currentHover;
 
-    public GameObject CurrentHover { get { return currentHover; } }
+	public GameObject CurrentHover { get { return currentHover; } }
 
-    void Start () {
+	void Start()
+	{
 		currentHover = null;
 	}
 
-	void Update () {
+	void Update()
+	{
 		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 		RaycastHit hit;
-		if (Physics.Raycast(ray, out hit, 100f, LayerMask.value)){
+		if (Physics.Raycast(ray, out hit, 100f, LayerMask.value))
+		{
+			var gameObject = hit.collider.gameObject;
+
 			// NB: only for blocking interactions.
-			if (hit.transform.gameObject.tag == "InteractionCollider")
+			if (gameObject.tag == "InteractionCollider")
 			{
 				return;
 			}
 
-			Debug.Log(hit.transform.gameObject);
-
-			if (hit.transform.gameObject != currentHover) {
-				currentHover = hit.transform.gameObject;
+			if (gameObject != currentHover)
+			{
+				currentHover = gameObject;
 				OnHoverUpdate.Invoke(currentHover);
 			}
-		} else {
-			if (currentHover != null) {
+		}
+		else
+		{
+			if (currentHover != null)
+			{
 				currentHover = null;
 				OnHoverUpdate.Invoke(null);
 			}
-		}	
+		}
 	}
 }

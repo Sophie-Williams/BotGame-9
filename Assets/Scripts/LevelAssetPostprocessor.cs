@@ -26,6 +26,13 @@ public class LevelAssetPostprocessor : AssetPostprocessor
 			return;
 		}
 
+		if (t.name.Equals("Colliders"))
+		{
+			Debug.Log("Adding colliders");
+			ApplyColliders(t);
+			return;
+		}
+
 		// Recurse
 		foreach (Transform child in t)
 		{
@@ -61,7 +68,24 @@ public class LevelAssetPostprocessor : AssetPostprocessor
 			child.gameObject.tag = "InteractionCollider";
 
 			var collider = child.gameObject.AddComponent<MeshCollider>();
-			collider.convex = true;
+			child.gameObject.GetComponent<MeshRenderer>().enabled = false;
+		}
+	}
+
+	/// <summary>
+	/// Add interaction colliders which prevent interaction rays from reaching through.
+	/// 
+	/// This is used to create geometry that prevents interacting from going through things, like walls.
+	/// </summary>
+	/// <param name="t"></param>
+	void ApplyColliders(Transform t)
+	{
+		foreach (Transform child in t)
+		{
+			// NB: block interaction rays
+			child.gameObject.layer = LayerMask.NameToLayer("Default");
+
+			var collider = child.gameObject.AddComponent<MeshCollider>();
 			child.gameObject.GetComponent<MeshRenderer>().enabled = false;
 		}
 	}

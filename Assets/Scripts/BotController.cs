@@ -16,8 +16,8 @@ public class BotController : Playable
 	public void Start()
 	{
 		botState = State.GetOrSetBotState(Id, transform.position, transform.rotation);
-		transform.rotation = botState.Rotation;
-		transform.position = botState.Position;
+		Transform.rotation = botState.Rotation;
+		Transform.position = botState.Position;
 	}
 
 	/// <summary>

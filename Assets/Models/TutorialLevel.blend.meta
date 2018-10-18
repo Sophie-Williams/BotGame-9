@@ -29,6 +29,13 @@ ModelImporter:
     100046: MidWall
     100048: InteractionColliders
     100050: StaticGeometry
+    100052: ApartmentCeilingCollider
+    100054: ApartmentWindowWall3Collider
+    100056: ApartnmentFloorCollider
+    100058: MidWallCollider
+    100060: WallNorthCollider
+    100062: WallSouthCollider
+    100064: WallWestCollider
     400000: ApartmentCeiling
     400002: ApartmentHallwayPortal
     400004: ApartmentInnerWall
@@ -55,6 +62,13 @@ ModelImporter:
     400046: MidWall
     400048: InteractionColliders
     400050: StaticGeometry
+    400052: ApartmentCeilingCollider
+    400054: ApartmentWindowWall3Collider
+    400056: ApartnmentFloorCollider
+    400058: MidWallCollider
+    400060: WallNorthCollider
+    400062: WallSouthCollider
+    400064: WallWestCollider
     2100000: ApartmentWall
     2100002: ApartmentCeiling
     2100004: ApartmentFloor
@@ -87,6 +101,13 @@ ModelImporter:
     2300036: WindowSill
     2300038: ApartmentWall
     2300040: MidWall
+    2300042: ApartmentCeilingCollider
+    2300044: ApartmentWindowWall3Collider
+    2300046: ApartnmentFloorCollider
+    2300048: MidWallCollider
+    2300050: WallNorthCollider
+    2300052: WallSouthCollider
+    2300054: WallWestCollider
     3300000: ApartmentCeiling
     3300002: ApartmentHallwayPortal
     3300004: ApartmentInnerWall
@@ -108,6 +129,13 @@ ModelImporter:
     3300036: WindowSill
     3300038: ApartmentWall
     3300040: MidWall
+    3300042: ApartmentCeilingCollider
+    3300044: ApartmentWindowWall3Collider
+    3300046: ApartnmentFloorCollider
+    3300048: MidWallCollider
+    3300050: WallNorthCollider
+    3300052: WallSouthCollider
+    3300054: WallWestCollider
     4300000: HallwayWallSouth
     4300002: HallwayCeiling
     4300004: HallwayFloor
@@ -129,8 +157,22 @@ ModelImporter:
     4300036: WindowGlow
     4300038: ApartmentWall
     4300040: MidWall
+    4300042: ApartmentCeilingCollider
+    4300044: ApartnmentFloorCollider
+    4300046: WallSouthCollider
+    4300048: ApartmentWindowWall3Collider
+    4300050: WallNorthCollider
+    4300052: WallWestCollider
+    4300054: MidWallCollider
     6400000: ApartmentWall
     6400002: MidWall
+    6400004: ApartmentCeilingCollider
+    6400006: ApartmentWindowWall3Collider
+    6400008: ApartnmentFloorCollider
+    6400010: MidWallCollider
+    6400012: WallNorthCollider
+    6400014: WallSouthCollider
+    6400016: WallWestCollider
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

@@ -14,7 +14,9 @@ public class CameraController : Playable
 	[SerializeField] float MinVerticalAngle;
 	[SerializeField] float MaxVerticalAngle;
 	[SerializeField] [Range(10f, 50f)] float RotationSpeed = 30f;
-	public List<Event> OnMakeActive = new List<Event>();
+
+	public delegate void CameraEnterAction();
+	public event CameraEnterAction OnEnter;
 
 	private GameState.CameraState cameraState;
 	private Vector3 initialRotation;
@@ -47,10 +49,8 @@ public class CameraController : Playable
 		CameraTransform.localPosition = Vector3.zero;
 		CameraTransform.localRotation = Quaternion.identity;
 
-		foreach (Event e in OnMakeActive)
-		{
-			StartCoroutine(e.Fire());
-		}
+		if (OnEnter != null)
+			OnEnter.Invoke();
 	}
 
 	/// <summary>
