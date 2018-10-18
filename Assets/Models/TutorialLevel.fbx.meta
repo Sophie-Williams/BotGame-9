@@ -240,6 +240,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Door_material
+    second: {fileID: 2100000, guid: d3a75f1282af2de46a74e30114bac3e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Handle_material
+    second: {fileID: 2100000, guid: 28f81fe2acf47ab4194d5df74f1b613f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: TrimColor
     second: {fileID: 2100000, guid: 6ad3e6f10d8ceb249a849631d9754c77, type: 2}
   - first:
