@@ -10,7 +10,7 @@ public class GameState : ScriptableObject
 	public Quest CurrentQuest;
 	public List<string> Completed = new List<string>();
 	public List<CameraState> CameraStates = new List<CameraState>();
-	public List<BotState> BotStates = new List<BotState>();
+	public List<EntityTransform> EntityTransforms = new List<EntityTransform>();
 
 	private void OnEnable()
 	{
@@ -38,7 +38,7 @@ public class GameState : ScriptableObject
 		CurrentPlayableId = GameState.DEFAULT_PLAYABLE_ID;
 		Completed.Clear();
 		CameraStates.Clear();
-		BotStates.Clear();
+		EntityTransforms.Clear();
 	}
 
 	/// <summary>
@@ -55,10 +55,9 @@ public class GameState : ScriptableObject
 			cameraState.VerticalRotation = 0;
 		}
 
-		foreach (var botState in BotStates)
+		foreach (var entityTransform in EntityTransforms)
 		{
-			botState.Rotation = botState.InitialRotation;
-			botState.Position = botState.InitialPosition;
+			entityTransform.ResetToInitial();
 		}
 	}
 
@@ -96,17 +95,15 @@ public class GameState : ScriptableObject
 	}
 
 	/// <summary>
-	/// Get bot state if present, or set it to the initial state.
+	/// Get the entity transformation for the entity with the given ID.
 	/// </summary>
-	/// <param name="id">id of the bot to get</param>
-	/// <param name="initial">the initial state to set if not present</param>
 	/// <returns></returns>
-	public BotState GetOrSetBotState(string id, Vector3 initialPosition, Quaternion initialRotation)
+	public EntityTransform GetEntityTransform(string id, Transform initial)
 	{
 		// NB: if no ID is specified, do not persist state.
 		if (id != null && id != "")
 		{
-			var found = BotStates.Find(state => state.Id == id);
+			var found = EntityTransforms.Find(state => state.Id == id);
 
 			if (found != null && !found.UseOriginalPosition)
 			{
@@ -114,15 +111,15 @@ public class GameState : ScriptableObject
 			}
 		}
 
-		BotState newState = new BotState {
+		EntityTransform newState = new EntityTransform {
 			Id = id,
-			InitialPosition = initialPosition,
-			Position = initialPosition,
-			InitialRotation = initialRotation,
-			Rotation = initialRotation,
+			InitialPosition = initial.position,
+			Position = initial.position,
+			InitialRotation = initial.rotation,
+			Rotation = initial.rotation,
 		};
 
-		BotStates.Add(newState);
+		EntityTransforms.Add(newState);
 		return newState;
 	}
 
@@ -135,7 +132,7 @@ public class GameState : ScriptableObject
 	}
 
 	[System.Serializable]
-	public class BotState
+	public class EntityTransform
 	{
 		public string Id;
 		public bool UseOriginalPosition;
@@ -143,5 +140,34 @@ public class GameState : ScriptableObject
 		public Quaternion Rotation;
 		public Vector3 InitialPosition;
 		public Vector3 Position;
+
+		/// <summary>
+		/// Reset current state to initial.
+		/// </summary>
+		public void ResetToInitial()
+		{
+			Position = InitialPosition;
+			Rotation = InitialRotation;
+		}
+
+		/// <summary>
+		/// Apply the current transform to the given argument.
+		/// </summary>
+		/// <param name="transform">transform to apply to</param>
+		public void ApplyTo(Transform transform)
+		{
+			transform.position = Position;
+			transform.rotation = Rotation;
+		}
+
+		/// <summary>
+		/// Update the current transform from the given argument.
+		/// </summary>
+		/// <param name="transform">transform to update from</param>
+		public void UpdateFrom(Transform transform)
+		{
+			Position = transform.position;
+			Rotation = transform.rotation;
+		}
 	}
 }

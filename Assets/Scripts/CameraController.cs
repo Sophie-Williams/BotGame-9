@@ -26,7 +26,7 @@ public class CameraController : Playable
 		var info = GetComponent<PlayableInfo>();
 		initialRotation = RotationAxis.localRotation.eulerAngles;
 		cameraState = State.GetCameraState(info.Id);
-		Apply();
+		ApplyState();
 	}
 
 	/// <summary>
@@ -66,13 +66,10 @@ public class CameraController : Playable
 	{
 		cameraState.HorizontalRotation = Mathf.Clamp(cameraState.HorizontalRotation + h * Time.deltaTime * RotationSpeed, MinHorizontalAngle, MaxHorizontalAngle);
 		cameraState.VerticalRotation = Mathf.Clamp(cameraState.VerticalRotation + v * Time.deltaTime * RotationSpeed, MinVerticalAngle, MaxVerticalAngle);
-		Apply();
+		ApplyState();
 	}
 
-	/// <summary>
-	/// Apply all state.
-	/// </summary>
-	void Apply()
+	public override void ApplyState()
 	{
 		RotationAxis.localRotation = Quaternion.Euler(initialRotation + Vector3.up * cameraState.HorizontalRotation + Vector3.right * cameraState.VerticalRotation);
 	}

@@ -6,20 +6,23 @@ public class BotController : Playable
 {
 	[SerializeField] GameState State;
 	[SerializeField] Transform CameraAttachment;
-	[SerializeField] Transform Transform;
 	[SerializeField] Rigidbody Body;
 	[SerializeField] [Range(0f, 180)] float RotationSpeed = 90f;
 	[SerializeField] [Range(0.1f, 2f)] float MovementSpeed = 5f;
 	public List<Event> OnMakeActive = new List<Event>();
 
-	private GameState.BotState botState;
+	private GameState.EntityTransform entityTransform;
 
 	public void Start()
 	{
 		var info = GetComponent<PlayableInfo>();
-		botState = State.GetOrSetBotState(info.Id, Transform.position, Transform.rotation);
-		Transform.rotation = botState.Rotation;
-		Transform.position = botState.Position;
+		entityTransform = State.GetEntityTransform(info.Id, Body.transform);
+		ApplyState();
+	}
+
+	public override void ApplyState()
+	{
+		entityTransform.ApplyTo(Body.transform);
 	}
 
 	/// <summary>
@@ -62,18 +65,21 @@ public class BotController : Playable
 		Vector3 movement = new Vector3(0, 0, -v) * MovementSpeed * Time.deltaTime;
 		Quaternion deltaRotation = Quaternion.Euler(0, h * RotationSpeed * Time.deltaTime, 0);
 
-		Debug.Log(Transform);
+		var transform = Body.transform;
 
-		Body.MovePosition(Transform.position + Transform.rotation * movement);
-		Body.MoveRotation(Transform.rotation * deltaRotation);
+		Body.MovePosition(transform.position + transform.rotation * movement);
+		Body.MoveRotation(transform.rotation * deltaRotation);
 
-		if (Transform.position.y < -100f)
+		// In case we've falled out of bounds, reset to initial.
+		// TODO: make this a global check for all entities.
+		if (transform.position.y < -100f)
 		{
-			Transform.position = botState.InitialPosition;
-			Transform.rotation = botState.InitialRotation;
+			entityTransform.ResetToInitial();
+			entityTransform.ApplyTo(transform);
 		}
-
-		botState.Position = Transform.position;
-		botState.Rotation = Transform.rotation;
+		else
+		{
+			entityTransform.UpdateFrom(transform);
+		}
 	}
 }

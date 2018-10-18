@@ -13,6 +13,11 @@ public abstract class Playable : MonoBehaviour
 	}
 
 	/// <summary>
+	/// Apply the global state to the given playable.
+	/// </summary>
+	public abstract void ApplyState();
+
+	/// <summary>
 	/// Deferred update called by the PlayerController.
 	/// 
 	/// This is used since we only want to handle update events for entities which are currently being played.

@@ -24,11 +24,20 @@ public class EndGame : ScriptableObject, Event.Listener
 	{
 		State.Reset();
 
+		// reset all playable state to current state.
+		var playables = FindObjectsOfType<Playable>();
+
+		foreach (var playable in playables)
+		{
+			playable.ApplyState();
+		}
+
+		// apply the player controller.
 		var player = FindObjectOfType<PlayerController>();
 
 		if (player != null)
 		{
-			player.Setup();
+			player.ApplyState();
 		}
 
 		yield break;

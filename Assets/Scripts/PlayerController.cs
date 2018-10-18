@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 	void Start()
 	{
 		FindObjectOfType<HoverController>().OnHoverUpdate += this.OnHoverUpdate;
-		Setup();
+		ApplyState();
 	}
 
 	void Update()
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 	/// <summary>
 	/// Set up the state for this PlayerController.
 	/// </summary>
-	public void Setup()
+	public void ApplyState()
 	{
 		MoveTo(State.CurrentPlayable);
 	}
