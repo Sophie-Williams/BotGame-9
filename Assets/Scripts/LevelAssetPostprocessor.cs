@@ -69,6 +69,8 @@ public class LevelAssetPostprocessor : AssetPostprocessor
 
 			var collider = child.gameObject.AddComponent<MeshCollider>();
 			collider.enabled = false;
+
+			UnityEngine.Object.DestroyImmediate(child.GetComponent<MeshRenderer>());
 		}
 	}
 
@@ -86,7 +88,9 @@ public class LevelAssetPostprocessor : AssetPostprocessor
 			child.gameObject.layer = LayerMask.NameToLayer("Default");
 
 			var collider = child.gameObject.AddComponent<MeshCollider>();
-			collider.enabled = false;
+			collider.enabled = true;
+
+			UnityEngine.Object.DestroyImmediate(child.GetComponent<MeshRenderer>());
 		}
 	}
 }
