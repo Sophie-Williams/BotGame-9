@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c665f51bdb264ca478334520827ce5c9, type: 3}
+  m_Name: KnockDialogue
+  m_EditorClassIdentifier: 
+  Audio: {fileID: 8300000, guid: 5c1807bf1251dc44990fd90c11c67f55, type: 3}
+  SubtitleSystem: {fileID: 11400000, guid: 566ac0d24f55882409e65ccd0329f723, type: 2}
+  Snippets:
+  - Delay: 0
+    Time: 1
+    Text: knock on door
+    ClosedCaption: 1
+  - Delay: 0
+    Time: 1.2
+    Text: 
+    ClosedCaption: 0
+  - Delay: 0
+    Time: 1
+    Text: more knocking
+    ClosedCaption: 1
