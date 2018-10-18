@@ -1,8 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundTriggerController : MonoBehaviour, EventListener
+/// <summary>
+/// A listeners that listens for the specified event and plays a sound.
+/// </summary>
+public class PlaySoundListener : MonoBehaviour, Event.Listener
 {
 	public AudioClip Audio;
 	public Event Event = null;
@@ -10,9 +12,11 @@ public class SoundTriggerController : MonoBehaviour, EventListener
 	[System.NonSerialized]
 	private AudioSource Source;
 
+	public delegate void AudioPlayedAction();
+	public event AudioPlayedAction OnPlayed;
+
 	void Start()
 	{
-
 		if (Event != null)
 		{
 			Source = GetComponent<AudioSource>();
@@ -32,6 +36,11 @@ public class SoundTriggerController : MonoBehaviour, EventListener
 	{
 		Source.clip = Audio;
 		Source.Play();
+		yield return new WaitWhile(() => Source.isPlaying);
+
+		if (OnPlayed != null)
+			OnPlayed.Invoke();
+
 		yield break;
 	}
 }

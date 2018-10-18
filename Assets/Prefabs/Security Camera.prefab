@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 114452222510939190}
   - component: {fileID: 114912336203745494}
   - component: {fileID: 114659563688591766}
+  - component: {fileID: 114229058156888806}
   m_Layer: 9
   m_Name: Controller
   m_TagString: Untagged
@@ -319,6 +320,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.3, z: 0.4}
   m_Center: {x: 0, y: -0.15, z: 0}
+--- !u!114 &114229058156888806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1360663277606676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: 
 --- !u!114 &114452222510939190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,7 +343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4216b852ac25fb4f8d1ae10f889bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: 
   State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
   RotationAxis: {fileID: 4217493957455754}
   CameraAttachment: {fileID: 4380529229858274}

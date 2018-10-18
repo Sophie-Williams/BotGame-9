@@ -23,8 +23,9 @@ public class CameraController : Playable
 
 	void Start()
 	{
+		var info = GetComponent<PlayableInfo>();
 		initialRotation = RotationAxis.localRotation.eulerAngles;
-		cameraState = State.GetCameraState(Id);
+		cameraState = State.GetCameraState(info.Id);
 		Apply();
 	}
 

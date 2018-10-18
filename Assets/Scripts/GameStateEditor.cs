@@ -15,12 +15,9 @@ public class GameStateEditor : Editor
 	{
 		base.OnInspectorGUI();
 
-		if (GUILayout.Button("Reset All"))
+		if (GUILayout.Button("Clear"))
 		{
-			state.CurrentPlayableId = GameState.DEFAULT_PLAYABLE_ID;
-			state.Completed.Clear();
-			state.CameraStates.Clear();
-			state.BotStates.Clear();
+			state.Clear();
 			EditorUtility.SetDirty(state);
 		}
 

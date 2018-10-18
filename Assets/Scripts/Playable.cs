@@ -2,10 +2,15 @@
 
 public abstract class Playable : MonoBehaviour
 {
-	/// <summary>
-	/// Identifier into the game state for recording (and retrieving) horizontal rotation.
-	/// </summary>
-	[SerializeField] public string Id;
+	public string LookupId()
+	{
+		var info = GetComponent<PlayableInfo>();
+
+		if (info != null)
+			return info.Id;
+
+		return "";
+	}
 
 	/// <summary>
 	/// Deferred update called by the PlayerController.

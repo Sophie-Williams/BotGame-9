@@ -4,7 +4,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Fire an event when we enter a camera.
 /// </summary>
-public class CameraEnterTrigger : MonoBehaviour {
+public class CameraEnter : MonoBehaviour {
 	/// <summary>
 	/// Events to fire.
 	/// </summary>

@@ -22,11 +22,43 @@ public class GameState : ScriptableObject
 		get
 		{
 			foreach (Playable playable in FindObjectsOfType<Playable>()) {
-				if (playable.Id == CurrentPlayableId)
+				if (playable.LookupId() == CurrentPlayableId)
 					return playable;
 			}
 
 			throw new System.Exception("Playable ID '" + CurrentPlayableId + "' does not exist in Scene");
+		}
+	}
+
+	/// <summary>
+	/// Reset the game state to the initial state.
+	/// </summary>
+	public void Clear()
+	{
+		CurrentPlayableId = GameState.DEFAULT_PLAYABLE_ID;
+		Completed.Clear();
+		CameraStates.Clear();
+		BotStates.Clear();
+	}
+
+	/// <summary>
+	/// Reset the game state to the initial state.
+	/// </summary>
+	public void Reset()
+	{
+		CurrentPlayableId = GameState.DEFAULT_PLAYABLE_ID;
+		Completed.Clear();
+
+		foreach (var cameraState in CameraStates)
+		{
+			cameraState.HorizontalRotation = 0;
+			cameraState.VerticalRotation = 0;
+		}
+
+		foreach (var botState in BotStates)
+		{
+			botState.Rotation = botState.InitialRotation;
+			botState.Position = botState.InitialPosition;
 		}
 	}
 
@@ -82,7 +114,14 @@ public class GameState : ScriptableObject
 			}
 		}
 
-		BotState newState = new BotState { Id = id, Position = initialPosition, Rotation = initialRotation };
+		BotState newState = new BotState {
+			Id = id,
+			InitialPosition = initialPosition,
+			Position = initialPosition,
+			InitialRotation = initialRotation,
+			Rotation = initialRotation,
+		};
+
 		BotStates.Add(newState);
 		return newState;
 	}
@@ -100,7 +139,9 @@ public class GameState : ScriptableObject
 	{
 		public string Id;
 		public bool UseOriginalPosition;
+		public Quaternion InitialRotation;
 		public Quaternion Rotation;
+		public Vector3 InitialPosition;
 		public Vector3 Position;
 	}
 }

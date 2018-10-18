@@ -80,7 +80,7 @@ public class Quest : ScriptableObject
 		}
 	}
 
-	public class QuestGoalListener : EventListener
+	public class QuestGoalListener : Event.Listener
 	{
 		public Quest Quest;
 		public QuestGoal Goal;

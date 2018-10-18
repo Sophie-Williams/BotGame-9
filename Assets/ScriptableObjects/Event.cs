@@ -6,13 +6,13 @@ using UnityEngine;
 public class Event : ScriptableObject
 {
 	[System.NonSerialized]
-	private List<EventListener> listeners = new List<EventListener>();
+	private List<Listener> listeners = new List<Listener>();
 
 	/// <summary>
 	/// Subscribe to all future events.
 	/// </summary>
 	/// <param name="listener"></param>
-	public void Subscribe(EventListener listener)
+	public void Subscribe(Listener listener)
 	{
 		listeners.Add(listener);
 	}
@@ -21,7 +21,7 @@ public class Event : ScriptableObject
 	/// Unsubscribe from all future events.
 	/// </summary>
 	/// <param name="listener"></param>
-	public void Unsubscribe(EventListener listener)
+	public void Unsubscribe(Listener listener)
 	{
 		listeners.Remove(listener);
 	}
@@ -32,14 +32,16 @@ public class Event : ScriptableObject
 	/// <returns></returns>
 	public IEnumerator Fire()
 	{
-		foreach (EventListener listener in listeners)
+		Debug.Log("Firing Event: " + this);
+
+		foreach (Listener listener in listeners)
 		{
 			yield return listener.Fire();
 		}
 	}
-}
 
-public interface EventListener
-{
-	IEnumerator Fire();
+	public interface Listener
+	{
+		IEnumerator Fire();
+	}
 }

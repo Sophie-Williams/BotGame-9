@@ -9,9 +9,8 @@ public class PlayerController : MonoBehaviour
 
 	void Start()
 	{
-		currentPlayable = State.CurrentPlayable;
-		currentPlayable.Enter();
 		FindObjectOfType<HoverController>().OnHoverUpdate += this.OnHoverUpdate;
+		Setup();
 	}
 
 	void Update()
@@ -26,16 +25,40 @@ public class PlayerController : MonoBehaviour
 			{
 				if (Input.GetMouseButton(0))
 				{
-					nextPlayable.Enter();
-					currentPlayable.Leave();
-					currentPlayable = nextPlayable;
-
-					if (currentPlayable.Id != null && currentPlayable.Id != "")
-					{
-						State.CurrentPlayableId = currentPlayable.Id;
-					}
+					MoveTo(nextPlayable);
 				}
 			}
+		}
+	}
+
+	/// <summary>
+	/// Set up the state for this PlayerController.
+	/// </summary>
+	public void Setup()
+	{
+		MoveTo(State.CurrentPlayable);
+	}
+
+	/// <summary>
+	/// Move into the given playable.
+	/// </summary>
+	/// <param name="next"></param>
+	public void MoveTo(Playable next)
+	{
+		next.Enter();
+
+		if (currentPlayable != null)
+		{
+			currentPlayable.Leave();
+		}
+
+		currentPlayable = next;
+
+		var id = currentPlayable.LookupId();
+
+		if (id != "")
+		{
+			State.CurrentPlayableId = id;
 		}
 	}
 

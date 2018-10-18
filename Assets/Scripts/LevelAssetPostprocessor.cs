@@ -68,7 +68,7 @@ public class LevelAssetPostprocessor : AssetPostprocessor
 			child.gameObject.tag = "InteractionCollider";
 
 			var collider = child.gameObject.AddComponent<MeshCollider>();
-			child.gameObject.GetComponent<MeshRenderer>().enabled = false;
+			collider.enabled = false;
 		}
 	}
 
@@ -86,7 +86,7 @@ public class LevelAssetPostprocessor : AssetPostprocessor
 			child.gameObject.layer = LayerMask.NameToLayer("Default");
 
 			var collider = child.gameObject.AddComponent<MeshCollider>();
-			child.gameObject.GetComponent<MeshRenderer>().enabled = false;
+			collider.enabled = false;
 		}
 	}
 }

@@ -269,11 +269,6 @@ Prefab:
       propertyPath: Events.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114452222510939190, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
-        type: 2}
-      propertyPath: OnMakeActive.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4373960214835522, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.48
@@ -306,21 +301,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114452222510939190, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
-        type: 2}
-      propertyPath: Id
-      value: CameraOne
+    - target: {fileID: 1262267682164874, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
+      propertyPath: m_Name
+      value: First Camera
       objectReference: {fileID: 0}
-    - target: {fileID: 114452222510939190, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
-        type: 2}
-      propertyPath: OnMakeActive.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: ee255964f6e9761418d04409ed9cc8ac,
-        type: 2}
     - target: {fileID: 114912336203745494, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
         type: 2}
       propertyPath: Display
       value: First Security Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229058156888806, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
+        type: 2}
+      propertyPath: Id
+      value: Firstcamera
       objectReference: {fileID: 0}
     - target: {fileID: 114659563688591766, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
         type: 2}
@@ -740,6 +733,23 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91440782af2386749a075e828d420386, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &561129014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1738647118738234, guid: 91440782af2386749a075e828d420386,
+    type: 2}
+  m_PrefabInternal: {fileID: 561129013}
+--- !u!114 &561129015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 561129014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: FloorBot
 --- !u!1 &603901152
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,6 +913,7 @@ GameObject:
   - component: {fileID: 836614981}
   - component: {fileID: 836614980}
   - component: {fileID: 836614982}
+  - component: {fileID: 836614983}
   m_Layer: 9
   m_Name: Controller
   m_TagString: Untagged
@@ -934,7 +945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4216b852ac25fb4f8d1ae10f889bb85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Id: SteveAI
   State: {fileID: 11400000, guid: 983e8268edb290147a6c3b4cfa9eae32, type: 2}
   RotationAxis: {fileID: 603901153}
   CameraAttachment: {fileID: 1175620456}
@@ -968,6 +978,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Display: Steve the AI
+--- !u!114 &836614983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 836614978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: SteveAI
 --- !u!1 &969145743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,6 +1085,7 @@ GameObject:
   - component: {fileID: 1006988227}
   - component: {fileID: 1006988226}
   - component: {fileID: 1006988225}
+  - component: {fileID: 1006988228}
   m_Layer: 0
   m_Name: DoorAudioSource
   m_TagString: Untagged
@@ -1185,12 +1208,25 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1006988224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.936, y: 0.602, z: -2.56}
+  m_LocalPosition: {x: -0.936, y: 0.602, z: -3.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 611793578}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006988228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006988224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82ddd958c397f74e860e97eeb8c86a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Events:
+  - {fileID: 11400000, guid: d516ad30ade0fad4f99e81272c8d819c, type: 2}
 --- !u!1001 &1120356183
 Prefab:
   m_ObjectHideFlags: 0
@@ -2062,6 +2098,23 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 462b09dec29bed04c93445e5b093bd54, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1738462833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1581957140582044, guid: 462b09dec29bed04c93445e5b093bd54,
+    type: 2}
+  m_PrefabInternal: {fileID: 1738462832}
+--- !u!114 &1738462834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738462833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: BrokenBot
 --- !u!1 &1828347802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,9 +2249,36 @@ Prefab:
       propertyPath: Display
       value: Second Security Camera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1262267682164874, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
+      propertyPath: m_Name
+      value: Second Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 114229058156888806, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
+        type: 2}
+      propertyPath: Id
+      value: SecondCa
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114229058156888806, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: e47fbd4c35eeaf04c936f874a0f0b12a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1897498570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1360663277606676, guid: e47fbd4c35eeaf04c936f874a0f0b12a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1897498569}
+--- !u!114 &1897498571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1897498570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5348c8596e2177d44a8fb57d3851eff1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Id: SecondCamera
 --- !u!1 &2020622087
 GameObject:
   m_ObjectHideFlags: 0
