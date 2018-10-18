@@ -39,6 +39,14 @@ ModelImporter:
     100066: WallNorthCollider
     100068: WallSouthCollider
     100070: WallWestCollider
+    100072: ApartmentWindowWall3Collider.001
+    100074: CTRL_Baseboard
+    100076: CTRL_Hole
+    100078: Door
+    100080: Door_Group
+    100082: DoorFrame
+    100084: Handle_Back
+    100086: Handle_Front
     400000: Apartment
     400002: ApartmentCeiling
     400004: ApartmentHallwayPortal
@@ -75,6 +83,14 @@ ModelImporter:
     400066: WallNorthCollider
     400068: WallSouthCollider
     400070: WallWestCollider
+    400072: ApartmentWindowWall3Collider.001
+    400074: CTRL_Baseboard
+    400076: CTRL_Hole
+    400078: Door
+    400080: Door_Group
+    400082: DoorFrame
+    400084: Handle_Back
+    400086: Handle_Front
     2000000: Camera
     2100000: ApartmentWall
     2100002: ApartmentCeiling
@@ -85,6 +101,9 @@ ModelImporter:
     2100012: WindowGlow
     2100014: No Name
     2100016: WindowBorder
+    2100018: hidden_material
+    2100020: Door_material
+    2100022: Handle_material
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall
@@ -113,6 +132,13 @@ ModelImporter:
     2300050: WallNorthCollider
     2300052: WallSouthCollider
     2300054: WallWestCollider
+    2300056: ApartmentWindowWall3Collider.001
+    2300058: CTRL_Baseboard
+    2300060: CTRL_Hole
+    2300062: Door
+    2300064: DoorFrame
+    2300066: Handle_Back
+    2300068: Handle_Front
     3300000: ApartmentCeiling
     3300002: ApartmentHallwayPortal
     3300004: ApartmentInnerWall
@@ -141,6 +167,13 @@ ModelImporter:
     3300050: WallNorthCollider
     3300052: WallSouthCollider
     3300054: WallWestCollider
+    3300056: ApartmentWindowWall3Collider.001
+    3300058: CTRL_Baseboard
+    3300060: CTRL_Hole
+    3300062: Door
+    3300064: DoorFrame
+    3300066: Handle_Back
+    3300068: Handle_Front
     4300000: HallwayWallSouth
     4300002: HallwayCeiling
     4300004: HallwayFloor
@@ -169,6 +202,13 @@ ModelImporter:
     4300050: WallNorthCollider
     4300052: WallWestCollider
     4300054: MidWallCollider
+    4300056: CTRL_Baseboard
+    4300058: CTRL_Hole
+    4300060: DoorFrame
+    4300062: Door
+    4300064: Handle_Back
+    4300066: Handle_Front
+    4300068: ApartmentWindowWall3Collider.001
     6400000: ApartmentWall
     6400002: MidWall
     6400004: ApartmentCeilingCollider
@@ -178,6 +218,7 @@ ModelImporter:
     6400012: WallNorthCollider
     6400014: WallSouthCollider
     6400016: WallWestCollider
+    6400018: ApartmentWindowWall3Collider.001
     10800000: Lamp
     10800002: Lamp.001
   externalObjects:
