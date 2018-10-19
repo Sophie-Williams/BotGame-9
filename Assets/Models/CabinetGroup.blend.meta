@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: 9a3d7a7a6d58dd9449feff55082256e5
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Baseboard1
+    100002: Baseboard2
+    100004: Baseboard3
+    100006: Cabinet1
+    100008: Cabinet1_Door
+    100010: Cabinet2
+    100012: Cabinet2_Door
+    100014: Cabinet3
+    100016: //RootNode
+    100018: Countertop1
+    100020: Drawer
+    100022: Drawer_001
+    100024: Drawer_002
+    100026: Drawer_003
+    400000: Baseboard1
+    400002: Baseboard2
+    400004: Baseboard3
+    400006: Cabinet1
+    400008: Cabinet1_Door
+    400010: Cabinet2
+    400012: Cabinet2_Door
+    400014: Cabinet3
+    400016: //RootNode
+    400018: Countertop1
+    400020: Drawer
+    400022: Drawer_001
+    400024: Drawer_002
+    400026: Drawer_003
+    2100000: Cabinet_material
+    2100002: Baseboard_material
+    2100004: Door_material
+    2100006: countertop_material
+    2100008: Drawer_material
+    2300000: Baseboard1
+    2300002: Baseboard2
+    2300004: Baseboard3
+    2300006: Cabinet1
+    2300008: Cabinet1_Door
+    2300010: Cabinet2
+    2300012: Cabinet2_Door
+    2300014: Cabinet3
+    2300016: Countertop1
+    2300018: Drawer
+    2300020: Drawer_001
+    2300022: Drawer_002
+    2300024: Drawer_003
+    3300000: Baseboard1
+    3300002: Baseboard2
+    3300004: Baseboard3
+    3300006: Cabinet1
+    3300008: Cabinet1_Door
+    3300010: Cabinet2
+    3300012: Cabinet2_Door
+    3300014: Cabinet3
+    3300016: Countertop1
+    3300018: Drawer
+    3300020: Drawer_001
+    3300022: Drawer_002
+    3300024: Drawer_003
+    4300000: Cabinet1
+    4300002: Baseboard1
+    4300004: Cabinet1_Door
+    4300006: Countertop1
+    4300008: Cabinet2
+    4300010: Baseboard2
+    4300012: Cabinet2_Door
+    4300014: Cabinet3
+    4300016: Baseboard3
+    4300018: Drawer
+    4300020: Drawer_001
+    4300022: Drawer_002
+    4300024: Drawer_003
+    7400000: Default Take
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

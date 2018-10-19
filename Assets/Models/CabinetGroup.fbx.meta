@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: d6d1f76b1f3b752419d574588104fcae
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Baseboard1
+    100002: Baseboard2
+    100004: Baseboard3
+    100006: Cabinet1
+    100008: Cabinet1_Door
+    100010: Cabinet2
+    100012: Cabinet2_Door
+    100014: Cabinet3
+    100016: //RootNode
+    100018: Countertop1
+    100020: Drawer
+    100022: Drawer.001
+    100024: Drawer.002
+    100026: Drawer.003
+    400000: Baseboard1
+    400002: Baseboard2
+    400004: Baseboard3
+    400006: Cabinet1
+    400008: Cabinet1_Door
+    400010: Cabinet2
+    400012: Cabinet2_Door
+    400014: Cabinet3
+    400016: //RootNode
+    400018: Countertop1
+    400020: Drawer
+    400022: Drawer.001
+    400024: Drawer.002
+    400026: Drawer.003
+    2100000: Cabinet_material
+    2100002: Baseboard_material
+    2100004: Door_material
+    2100006: countertop_material
+    2100008: Drawer_material
+    2300000: Baseboard1
+    2300002: Baseboard2
+    2300004: Baseboard3
+    2300006: Cabinet1
+    2300008: Cabinet1_Door
+    2300010: Cabinet2
+    2300012: Cabinet2_Door
+    2300014: Cabinet3
+    2300016: Countertop1
+    2300018: Drawer
+    2300020: Drawer.001
+    2300022: Drawer.002
+    2300024: Drawer.003
+    3300000: Baseboard1
+    3300002: Baseboard2
+    3300004: Baseboard3
+    3300006: Cabinet1
+    3300008: Cabinet1_Door
+    3300010: Cabinet2
+    3300012: Cabinet2_Door
+    3300014: Cabinet3
+    3300016: Countertop1
+    3300018: Drawer
+    3300020: Drawer.001
+    3300022: Drawer.002
+    3300024: Drawer.003
+    4300000: Cabinet1
+    4300002: Baseboard1
+    4300004: Cabinet1_Door
+    4300006: Countertop1
+    4300008: Cabinet2
+    4300010: Baseboard2
+    4300012: Cabinet2_Door
+    4300014: Cabinet3
+    4300016: Baseboard3
+    4300018: Drawer
+    4300020: Drawer.001
+    4300022: Drawer.002
+    4300024: Drawer.003
+    6400000: Baseboard1
+    6400002: Baseboard2
+    6400004: Baseboard3
+    6400006: Cabinet1
+    6400008: Cabinet1_Door
+    6400010: Cabinet2
+    6400012: Cabinet2_Door
+    6400014: Cabinet3
+    6400016: Countertop1
+    6400018: Drawer
+    6400020: Drawer.001
+    6400022: Drawer.002
+    6400024: Drawer.003
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Baseboard_material
+    second: {fileID: 2100000, guid: c9f36902b7029cb41b4bb5b91f72a59a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cabinet_material
+    second: {fileID: 2100000, guid: c9f36902b7029cb41b4bb5b91f72a59a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_material
+    second: {fileID: 2100000, guid: c9f36902b7029cb41b4bb5b91f72a59a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Drawer_material
+    second: {fileID: 2100000, guid: c9f36902b7029cb41b4bb5b91f72a59a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: countertop_material
+    second: {fileID: 2100000, guid: 7186aa1621451c04e841569b09e82d32, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 1
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 20
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 30
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

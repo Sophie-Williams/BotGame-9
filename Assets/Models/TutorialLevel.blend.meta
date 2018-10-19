@@ -44,6 +44,27 @@ ModelImporter:
     100076: DoorFrame
     100078: Handle_Back
     100080: Handle_Front
+    100082: Baseboard1
+    100084: Baseboard2
+    100086: Baseboard3
+    100088: Cabinet1
+    100090: Cabinet1_Door
+    100092: Cabinet2
+    100094: Cabinet2_Door
+    100096: Cabinet3
+    100098: Countertop1
+    100100: Drawer
+    100102: Drawer_001
+    100104: Drawer_002
+    100106: Drawer_003
+    100108: Handle
+    100110: Handle_001
+    100112: Handle_002
+    100114: Handle_003
+    100116: Handle_004
+    100118: Handle_005
+    100120: RadiatorHighPoly
+    100122: RadiatorLowPoly
     400000: ApartmentCeiling
     400002: ApartmentHallwayPortal
     400004: ApartmentInnerWall
@@ -85,6 +106,27 @@ ModelImporter:
     400076: DoorFrame
     400078: Handle_Back
     400080: Handle_Front
+    400082: Baseboard1
+    400084: Baseboard2
+    400086: Baseboard3
+    400088: Cabinet1
+    400090: Cabinet1_Door
+    400092: Cabinet2
+    400094: Cabinet2_Door
+    400096: Cabinet3
+    400098: Countertop1
+    400100: Drawer
+    400102: Drawer_001
+    400104: Drawer_002
+    400106: Drawer_003
+    400108: Handle
+    400110: Handle_001
+    400112: Handle_002
+    400114: Handle_003
+    400116: Handle_004
+    400118: Handle_005
+    400120: RadiatorHighPoly
+    400122: RadiatorLowPoly
     2100000: ApartmentWall
     2100002: ApartmentCeiling
     2100004: ApartmentFloor
@@ -99,6 +141,10 @@ ModelImporter:
     2100022: hidden_material
     2100024: Door_material
     2100026: Handle_material
+    2100028: Cabinet_material
+    2100030: Baseboard_material
+    2100032: Drawer_material
+    2100034: countertop_material
     2300000: ApartmentCeiling
     2300002: ApartmentHallwayPortal
     2300004: ApartmentInnerWall
@@ -134,6 +180,27 @@ ModelImporter:
     2300064: DoorFrame
     2300066: Handle_Back
     2300068: Handle_Front
+    2300070: Baseboard1
+    2300072: Baseboard2
+    2300074: Baseboard3
+    2300076: Cabinet1
+    2300078: Cabinet1_Door
+    2300080: Cabinet2
+    2300082: Cabinet2_Door
+    2300084: Cabinet3
+    2300086: Countertop1
+    2300088: Drawer
+    2300090: Drawer_001
+    2300092: Drawer_002
+    2300094: Drawer_003
+    2300096: Handle
+    2300098: Handle_001
+    2300100: Handle_002
+    2300102: Handle_003
+    2300104: Handle_004
+    2300106: Handle_005
+    2300108: RadiatorHighPoly
+    2300110: RadiatorLowPoly
     3300000: ApartmentCeiling
     3300002: ApartmentHallwayPortal
     3300004: ApartmentInnerWall
@@ -169,6 +236,27 @@ ModelImporter:
     3300064: DoorFrame
     3300066: Handle_Back
     3300068: Handle_Front
+    3300070: Baseboard1
+    3300072: Baseboard2
+    3300074: Baseboard3
+    3300076: Cabinet1
+    3300078: Cabinet1_Door
+    3300080: Cabinet2
+    3300082: Cabinet2_Door
+    3300084: Cabinet3
+    3300086: Countertop1
+    3300088: Drawer
+    3300090: Drawer_001
+    3300092: Drawer_002
+    3300094: Drawer_003
+    3300096: Handle
+    3300098: Handle_001
+    3300100: Handle_002
+    3300102: Handle_003
+    3300104: Handle_004
+    3300106: Handle_005
+    3300108: RadiatorHighPoly
+    3300110: RadiatorLowPoly
     4300000: HallwayWallSouth
     4300002: HallwayCeiling
     4300004: HallwayFloor
@@ -204,6 +292,27 @@ ModelImporter:
     4300064: Handle_Back
     4300066: Handle_Front
     4300068: ApartmentWindowWall3Collider_001
+    4300070: RadiatorLowPoly
+    4300072: RadiatorHighPoly
+    4300074: Cabinet3
+    4300076: Baseboard3
+    4300078: Drawer_003
+    4300080: Handle_005
+    4300082: Drawer_002
+    4300084: Handle_004
+    4300086: Drawer_001
+    4300088: Handle_003
+    4300090: Drawer
+    4300092: Handle_002
+    4300094: Cabinet2
+    4300096: Baseboard2
+    4300098: Cabinet2_Door
+    4300100: Handle_001
+    4300102: Cabinet1
+    4300104: Baseboard1
+    4300106: Countertop1
+    4300108: Cabinet1_Door
+    4300110: Handle
     6400000: ApartmentWall
     6400002: MidWall
     6400004: ApartmentCeilingCollider
