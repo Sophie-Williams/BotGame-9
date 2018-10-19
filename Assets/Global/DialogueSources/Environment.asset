@@ -8,9 +8,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 619fcc1f1392fba4b885b3f6b266828d, type: 3}
-  m_Name: Subtitle System
+  m_Script: {fileID: 11500000, guid: 3fa49a92e78dd7a4f8f77459c339a647, type: 3}
+  m_Name: Environment
   m_EditorClassIdentifier: 
-  Enabled: 1
-  ClosedCaptions: 1
-  DefaultSource: {fileID: 11400000, guid: 1fb6bb335aa0fff498ce1c16a2c1055a, type: 2}
+  Name: 
+  SubtitleColor: {r: 1, g: 1, b: 1, a: 1}

@@ -14,21 +14,18 @@ MonoBehaviour:
   Audio: {fileID: 8300000, guid: 5c1807bf1251dc44990fd90c11c67f55, type: 3}
   SubtitleSystem: {fileID: 11400000, guid: 566ac0d24f55882409e65ccd0329f723, type: 2}
   Snippets:
-  - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
+  - Source: {fileID: 0}
     Text: knock on door
     Delay: 0
     Time: 1
     ClosedCaption: 1
-    DisplaySource: 0
-  - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
+  - Source: {fileID: 0}
     Text: 
     Delay: 0
     Time: 1.2
     ClosedCaption: 0
-    DisplaySource: 0
-  - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
+  - Source: {fileID: 0}
     Text: more knocking
     Delay: 0
     Time: 1
     ClosedCaption: 1
-    DisplaySource: 0

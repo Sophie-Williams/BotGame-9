@@ -42,9 +42,28 @@ public class Dialogue : ScriptableObject
 		public bool ClosedCaption = false;
 
 		/// <summary>
-		/// Force displaying the source, in case that is unclear.
+		/// Render the snippet with the given source if present.
 		/// </summary>
-		public bool DisplaySource = false;
+		public string Render(DialogueSource source)
+		{
+			var t = Text;
+
+			if (ClosedCaption)
+			{
+				t = "[" + t + "]";
+			}
+			else
+			{
+				t = "\"" + t + "\"";
+			}
+
+			if (source != null && source.Name != "")
+			{
+				t = source.Name + ": " + t;
+			}
+
+			return t;
+		}
 	}
 
 	/// <summary>
@@ -58,7 +77,7 @@ public class Dialogue : ScriptableObject
 
 		foreach (var snippet in Snippets)
 		{
-			yield return SubtitleSystem.RunDialogueSnippet(this, snippet);
+			yield return SubtitleSystem.RunDialogueSnippet(snippet);
 		}
 
 		SubtitleSystem.Clear();

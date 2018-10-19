@@ -16,25 +16,21 @@ MonoBehaviour:
   Snippets:
   - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
     Text: Hello, this is Jeff - your landlord,
-    Delay: 0.5
+    Delay: 0.4
     Time: 2
     ClosedCaption: 0
-    DisplaySource: 1
   - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
     Text: I'm still waiting for your rent this month.
     Delay: 0
     Time: 2.5
     ClosedCaption: 0
-    DisplaySource: 0
   - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
     Text: If you're not gonna pay it ...
     Delay: 0
-    Time: 1.5
+    Time: 1.4
     ClosedCaption: 0
-    DisplaySource: 0
   - Source: {fileID: 11400000, guid: 6b4501435b8b84446bba3f54b04dd35d, type: 2}
     Text: I will shut down your utilities.
     Delay: 0
     Time: 2
     ClosedCaption: 0
-    DisplaySource: 0
